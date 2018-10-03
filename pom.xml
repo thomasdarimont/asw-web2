@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.thomasdarimont.aswtraining</groupId>
+	<artifactId>asw-web2-2018</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>asw-web2-2018</name>
+
+	<modules>
+		<module>example-300-javaee-servlet-hello-world</module>
+		<module>example-310-javaee-servlet-dynamic-html</module>
+		<module>example-400-spring-minimal-app</module>
+		<module>example-410-spring-hello-world</module>
+		<module>example-420-spring-restcontroller</module>
+    <module>example-311-javaee-servlet-calculator-form</module>
+    <module>example-315-javaee-tracing-servlet-filter</module>
+    <module>example-320-javaee-servlet-context-listener</module>
+    <module>example-325-javaee-servlet-http-sessions</module>
+    <module>example-328-javaee-servlet-redirects</module>
+    <module>example-330-javaee-servlet-cookies</module>
+  </modules>
+</project>
