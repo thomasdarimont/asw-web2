@@ -1,6 +1,10 @@
+# exclude student projects
+*-student/
+*-STUDENT/
+*-Student/
+
 target/
 !.mvn/wrapper/maven-wrapper.jar
-
 
 # Created by https://www.gitignore.io/api/java
 
