@@ -12,14 +12,18 @@
 	<modules>
 		<module>example-300-javaee-servlet-hello-world</module>
 		<module>example-310-javaee-servlet-dynamic-html</module>
-		<module>example-400-spring-minimal-app</module>
-		<module>example-410-spring-hello-world</module>
-		<module>example-420-spring-restcontroller</module>
 		<module>example-311-javaee-servlet-calculator-form</module>
 		<module>example-315-javaee-tracing-servlet-filter</module>
 		<module>example-320-javaee-servlet-context-listener</module>
 		<module>example-325-javaee-servlet-http-sessions</module>
 		<module>example-328-javaee-servlet-redirects</module>
 		<module>example-330-javaee-servlet-cookies</module>
+		<module>example-400-spring-minimal-app</module>
+		<module>example-410-spring-hello-world</module>
+		<module>example-420-spring-restcontroller</module>
+		<module>example-425-spring-mvc-intro</module>
+		<module>example-430-spring-web-calculator</module>
+		<module>example-440-spring-mvc-marks</module>
+		<module>example-445-spring-web-jsp</module>
 	</modules>
 </project>

@@ -1,0 +1,44 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments::head}"></head>
+
+<body class="container">
+	<div th:replace="~{fragments::navbar(current=delete)}"></div>
+	<h1>Delete Mark</h1>
+	<form action="delete" method="post">
+		<input type="hidden" name="markId" th:value="${mark.id}">
+
+		<div class="form-group">
+			<label for="course">Course</label>
+			<input class="form-control" id="course" th:value="${mark.course.label}" disabled>
+		</div>
+
+		<div class="form-group">
+			<label for="score">Score</label>
+			<input type="number" class="form-control" th:value="${mark.score}" id="score" disabled>
+		</div>
+
+		<div class="form-group">
+			<label for="date">Date</label>
+			<div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+				<div class="input-group-prepend" data-target="#datetimepicker1" data-toggle="datetimepicker">
+					<div class="input-group-text">
+						<i class="fa fa-calendar"></i>
+					</div>
+				</div>
+				<input type="text" th:value="${#temporals.format(mark.date, 'dd.MM.yyyy')}"
+					pattern="\s*(3[01]|[12][0-9]|0?[1-9])\.(1[012]|0?[1-9])\.((?:19|20)\d{2})\s*$"
+					class="form-control datetimepicker-input" data-target="#datetimepicker1" disabled/>
+				<script defer>
+					$('#datetimepicker1').datetimepicker({
+						locale : "de",
+						format : "L"
+					});
+				</script>
+			</div>
+		</div>
+
+		<button type="submit" class="btn btn-primary">Delete</button>
+	</form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments::head}"></head>
+
+<body class="container">
+	<div th:replace="~{fragments::navbar (current=list)}"></div>
+	<h1>All Marks</h1>
+
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Course</th>
+				<th scope="col">Score</th>
+				<th scope="col">Date</th>
+				<th scope="col">Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:if="${marks.empty}">
+				<td colspan="4">No Marks Available</td>
+			</tr>
+			<tr th:each="mark, iterator: ${marks}">
+
+				<td th:text="${iterator.index + 1}" scope="row" />
+				<td th:text="${mark.course.label}" />
+				<td th:text="${mark.score}" />
+				<td th:text="${#temporals.format(mark.date, 'dd.MM.yyyy')}" />
+				<td>
+					<a th:href="|edit?markId=${mark.id}|" class="btn btn-primary" role="button">
+						<span class="fa fa-edit"></span>
+					</a>
+					<a th:href="|delete?markId=${mark.id}|" class="btn btn-secondary" role="button">
+						<i class="fa fa-trash"> </i>
+					</a>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
