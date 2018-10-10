@@ -25,5 +25,6 @@
 		<module>example-430-spring-web-calculator</module>
 		<module>example-440-spring-mvc-marks</module>
 		<module>example-445-spring-web-jsp</module>
+		<module>example-200-java-refresher</module>
 	</modules>
 </project>
