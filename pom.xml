@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.thomasdarimont.aswtraining</groupId>
 	<artifactId>asw-web2-2018</artifactId>
@@ -27,5 +25,12 @@
 		<module>example-440-spring-mvc-marks</module>
 		<module>example-445-spring-web-jsp</module>
 		<module>example-200-java-refresher</module>
-	</modules>
+    <module>lab-310-javaee-servlet-dynamic-table</module>
+    <module>lab-350-javaee-servlet-meeting-planner</module>
+    <module>lab-360-javaee-servlet-handoff</module>
+    <module>lab-370-javaee-servlet-filter-tracing</module>
+    <module>lab-375-javaee-servlet-http-sessions</module>
+    <module>lab-378-javaee-jsp-system-properties</module>
+    <module>lab-390-javaee-servlet-number-game</module>
+  </modules>
 </project>
