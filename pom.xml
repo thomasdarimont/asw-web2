@@ -18,6 +18,7 @@
 		<module>example-325-javaee-servlet-http-sessions</module>
 		<module>example-328-javaee-servlet-redirects</module>
 		<module>example-330-javaee-servlet-cookies</module>
+		<module>example-340-javaee-servlet-guess-number</module>
 		<module>example-400-spring-minimal-app</module>
 		<module>example-410-spring-hello-world</module>
 		<module>example-420-spring-restcontroller</module>
