@@ -32,5 +32,6 @@
     <module>lab-375-javaee-servlet-http-sessions</module>
     <module>lab-378-javaee-jsp-system-properties</module>
     <module>lab-390-javaee-servlet-number-game</module>
-  </modules>
+    <module>example-402-spring-dependency-injection-simple</module>
+	</modules>
 </project>
