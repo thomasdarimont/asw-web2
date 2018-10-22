@@ -18,13 +18,12 @@ public class Example402DependencyInjectionSimple {
 
 	private static void runManualConfigurationExample() {
 		// Manual configuration;
-		ProductService productService = new ProductService(new CatalogService(new InventoryService()));
+		ProductService productService = new ProductService(new CatalogService(), new InventoryService());
 
 		System.out.println();
 		System.out.println(productService.findProductById("42"));
 		System.out.println();
 	}
-	
 
 	private static void runSpringDependencyInjectionExample(String[] args) {
 
@@ -42,25 +41,22 @@ class ProductService {
 
 	private final CatalogService catalog;
 
-	public ProductService(CatalogService catalog) {
+	private final InventoryService inventory;
+
+	public ProductService(CatalogService catalog, InventoryService inventory) {
 		this.catalog = catalog;
+		this.inventory = inventory;
 	}
 
 	public String findProductById(String id) {
-		return catalog.findProductById(id);
+		return catalog.findProductById(id) + " available: " + inventory.isProductAvailable(id);
 	}
 }
 
 class CatalogService {
 
-	private final InventoryService inventoryService;
-
-	public CatalogService(InventoryService inventoryService) {
-		this.inventoryService = inventoryService;
-	}
-
 	public String findProductById(String id) {
-		return "Product: " + id + " available: " + inventoryService.isProductAvailable(id);
+		return "Product: " + id;
 	}
 }
 
@@ -75,13 +71,13 @@ class InventoryService {
 class ProductConfig {
 
 	@Bean
-	public ProductService productService(CatalogService catalog) {
-		return new ProductService(catalog);
+	public ProductService productService(CatalogService catalog, InventoryService inventory) {
+		return new ProductService(catalog, inventory);
 	}
 
 	@Bean
-	public CatalogService catalogService(InventoryService inventory) {
-		return new CatalogService(inventory);
+	public CatalogService catalogService() {
+		return new CatalogService();
 	}
 
 	@Bean
