@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+/**
+ * @see http://localhost:8080/greeting
+ */
 @SpringBootApplication
 public class Example425SpringMvcIntro {
 
@@ -36,7 +39,7 @@ class Greeting {
 class GreetingController {
 
 	/**
-	 * @param model, the "Model" part of the MVC pattern
+	 * @param model, the "Model" part of the MVC pattern, automatically provided by Spring MVC
 	 * @return
 	 */
 	@RequestMapping(method = RequestMethod.GET)
