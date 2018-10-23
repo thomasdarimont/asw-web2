@@ -9,6 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 @SpringBootApplication
 public class Example425SpringMvcIntro {
 
@@ -17,21 +20,12 @@ public class Example425SpringMvcIntro {
 	}
 }
 
+// The data object of our 'Model'
+@Data
+@AllArgsConstructor
 class Greeting {
 
 	String message;
-
-	public Greeting(String message) {
-		this.message = message;
-	}
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
 }
 
 /**
@@ -48,9 +42,11 @@ class GreetingController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String showGreeting(Model model) {
 
-		model.addAttribute("greeting", new Greeting("Hello World " + Instant.now()));
+		Greeting greeting = new Greeting("Hello World " + Instant.now());
+		model.addAttribute("greeting", greeting);
 
-		// the "View" part of the MVC pattern -> looks for greeting-view.html in src/main/resources/templates by default
+		// the "View" part of the MVC pattern
+		// looks for 'greeting-view.html' in src/main/resources/templates by default
 		return "greeting-view";
 	}
 }

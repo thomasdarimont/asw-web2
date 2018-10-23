@@ -36,5 +36,9 @@
     <module>
     	example-403-spring-dependency-injection-with-scanning
     </module>
+    <module>example-423-spring-restcontroller-validation</module>
+    <module>
+    	example-424-spring-restcontroller-content-negotation
+    </module>
 	</modules>
 </project>
