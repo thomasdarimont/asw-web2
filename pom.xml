@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.thomasdarimont.aswtraining</groupId>
 	<artifactId>asw-web2-2018</artifactId>
@@ -8,6 +10,7 @@
 	<name>asw-web2-2018</name>
 
 	<modules>
+		<module>example-200-java-refresher</module>
 		<module>example-300-javaee-servlet-hello-world</module>
 		<module>example-310-javaee-servlet-dynamic-html</module>
 		<module>example-311-javaee-servlet-calculator-form</module>
@@ -18,27 +21,31 @@
 		<module>example-330-javaee-servlet-cookies</module>
 		<module>example-340-javaee-servlet-guess-number</module>
 		<module>example-400-spring-minimal-app</module>
+		<module>example-402-spring-dependency-injection-simple</module>
+		<module>example-403-spring-dependency-injection-with-scanning</module>
 		<module>example-410-spring-hello-world</module>
 		<module>example-420-spring-restcontroller</module>
+		<module>example-423-spring-restcontroller-validation</module>
+		<module>example-424-spring-restcontroller-content-negotiation</module>
 		<module>example-425-spring-mvc-intro</module>
 		<module>example-430-spring-web-calculator</module>
 		<module>example-440-spring-mvc-marks</module>
 		<module>example-445-spring-web-jsp</module>
-		<module>example-200-java-refresher</module>
-    <module>lab-310-javaee-servlet-dynamic-table</module>
-    <module>lab-350-javaee-servlet-meeting-planner</module>
-    <module>lab-360-javaee-servlet-handoff</module>
-    <module>lab-370-javaee-servlet-filter-tracing</module>
-    <module>lab-375-javaee-servlet-http-sessions</module>
-    <module>lab-378-javaee-jsp-system-properties</module>
-    <module>lab-390-javaee-servlet-number-game</module>
-    <module>example-402-spring-dependency-injection-simple</module>
-    <module>
-    	example-403-spring-dependency-injection-with-scanning
-    </module>
-    <module>example-423-spring-restcontroller-validation</module>
-    <module>
-    	example-424-spring-restcontroller-content-negotation
-    </module>
+		<module>example-451-spring-todomvc-simple</module>
+		<module>example-452-spring-todomvc-simple-client</module>
+		<module>lab-310-javaee-servlet-dynamic-table</module>
+		<module>lab-310-javaee-servlet-dynamic-table-solution</module>
+		<module>lab-350-javaee-servlet-meeting-planner</module>
+		<module>lab-350-javaee-servlet-meeting-planner-solution</module>
+		<module>lab-360-javaee-servlet-handoff</module>
+		<module>lab-360-javaee-servlet-handoff-solution</module>
+		<module>lab-370-javaee-servlet-filter-tracing</module>
+		<module>lab-370-javaee-servlet-filter-tracing-solution</module>
+		<module>lab-375-javaee-servlet-http-sessions</module>
+		<module>lab-375-javaee-servlet-http-sessions-solution</module>
+		<module>lab-378-javaee-jsp-system-properties</module>
+		<module>lab-378-javaee-jsp-system-properties-solution</module>
+		<module>lab-390-javaee-servlet-number-game</module>
+		<module>lab-390-javaee-servlet-number-game-solution</module>
 	</modules>
 </project>
