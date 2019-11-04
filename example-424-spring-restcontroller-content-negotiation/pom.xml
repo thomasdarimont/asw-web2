@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.thomasdarimont.aswtraining</groupId>
     <version>0.0.1-SNAPSHOT</version>
-    <artifactId>example-424-spring-restcontroller-content-negotation</artifactId>
+    <artifactId>example-424-spring-restcontroller-content-negotiation</artifactId>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.5.RELEASE</version>
+        <version>2.2.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -28,6 +28,8 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <optional>true</optional>
+            <scope>provided</scope>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.xml/jaxb-impl -->

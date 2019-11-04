@@ -1,10 +1,10 @@
-package demo.product;
+package demo.shop.product;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import demo.catalog.CatalogService;
-import demo.inventory.InventoryService;
+import demo.shop.catalog.CatalogService;
+import demo.shop.inventory.InventoryService;
 
 /**
  * This class is found via "Component-Scanning" and registered as a Spring Bean

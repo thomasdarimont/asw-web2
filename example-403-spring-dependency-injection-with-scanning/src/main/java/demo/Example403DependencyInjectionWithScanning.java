@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import demo.product.ProductService;
+import demo.shop.product.ProductService;
 
 @SpringBootApplication
 public class Example403DependencyInjectionWithScanning {

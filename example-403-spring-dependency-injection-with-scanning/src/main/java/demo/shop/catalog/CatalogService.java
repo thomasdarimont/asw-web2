@@ -1,4 +1,4 @@
-package demo.inventory;
+package demo.shop.catalog;
 
 import org.springframework.stereotype.Component;
 
@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
  * Component.
  */
 @Component
-public class InventoryService {
+public class CatalogService {
 
-	public boolean isProductAvailable(String id) {
-		return Math.random() > 0.5;
+	public String findProductById(String id) {
+		return "Product: " + id;
 	}
 }

@@ -9,7 +9,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>com.github.thomasdarimont.aswtraining</groupId>
-	<artifactId>lab-378-javaee-jsp-system-properties</artifactId>
+	<artifactId>lab-378-javaee-jsp-system-properties-solution</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<dependencies>

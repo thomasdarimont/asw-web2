@@ -23,33 +23,3 @@ public class Example425SpringMvcIntro {
 	}
 }
 
-// The data object of our 'Model'
-@Data
-@AllArgsConstructor
-class Greeting {
-
-	String message;
-}
-
-/**
- * The "Controller" part of the MVC pattern  
- */
-@Controller
-@RequestMapping("/greeting")
-class GreetingController {
-
-	/**
-	 * @param model, the "Model" part of the MVC pattern, automatically provided by Spring MVC
-	 * @return
-	 */
-	@RequestMapping(method = RequestMethod.GET)
-	public String showGreeting(Model model) {
-
-		Greeting greeting = new Greeting("Hello World " + Instant.now());
-		model.addAttribute("greeting", greeting);
-
-		// the "View" part of the MVC pattern
-		// looks for 'greeting-view.html' in src/main/resources/templates by default
-		return "greeting-view";
-	}
-}

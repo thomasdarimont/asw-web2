@@ -1,6 +1,5 @@
 package demo;
 
-import lombok.Data;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.MediaType;
@@ -18,7 +17,6 @@ public class Example424RestControllerContentNegotiationApp {
     }
 }
 
-@Data
 @XmlRootElement
 class User {
 
@@ -30,17 +28,39 @@ class User {
     public User(String username) {
         this.username = username;
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }
 
 @RestController
 @RequestMapping("/users")
 class UserController {
 
-    @GetMapping(produces = {
-              MediaType.APPLICATION_JSON_VALUE
-            , MediaType.APPLICATION_XML_VALUE
-    })
+    /**
+     * <pre>
+     * {@code
+     * curl -v -H "Accept: application/json" http://localhost:8080/users/demo
+     *
+     * curl -v -H "Accept: application/xml" http://localhost:8080/users/demo
+     * }
+     * </pre>
+     *
+     * @return
+     */
+    @GetMapping(
+            path = "demo",
+            produces = {
+                    MediaType.APPLICATION_JSON_VALUE
+                    , MediaType.APPLICATION_XML_VALUE
+            })
     public User getDemoUser() {
         return new User("Asterix");
     }
+
 }
