@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  * <li>Implementieren Sie die mit YOURCODE markierten Stellen</li>
  * </ol>
  * 
- * @see http://localhost:8080/lab-350-javaee-servlet-meeting-planner/registration.html
+ * @see http://localhost:8080/lab-350-javaee-servlet-meeting-planner-solution/registration.html
  */
 @WebServlet("/registration")
 public class AttendeeRegistrationServlet extends HttpServlet {

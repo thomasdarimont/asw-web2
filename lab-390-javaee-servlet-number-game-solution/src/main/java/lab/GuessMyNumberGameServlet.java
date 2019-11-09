@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+/**
+ * 
+ * @see http://localhost:8080/lab-390-javaee-servlet-number-game-solution/game.jsp
+ */
 @WebServlet("/guess-my-number")
 public class GuessMyNumberGameServlet extends HttpServlet {
 
@@ -23,7 +27,7 @@ public class GuessMyNumberGameServlet extends HttpServlet {
 		Random random = new Random();
 		int max;
 		try {
-			max = Integer.valueOf(request.getParameter("max"));
+			max = Integer.parseInt(request.getParameter("max"));
 		} catch (NumberFormatException nfe) {
 			max = 100;
 		}
@@ -58,7 +62,7 @@ public class GuessMyNumberGameServlet extends HttpServlet {
 		}
 
 		int trials = ((AtomicInteger) session.getAttribute("trialCounter")).incrementAndGet();
-		int guess = Integer.valueOf(request.getParameter("guess"));
+		int guess = Integer.parseInt(request.getParameter("guess"));
 		int draw = (Integer) session.getAttribute("draw");
 
 		String hint;

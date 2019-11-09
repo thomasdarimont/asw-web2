@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * <li>Implementieren Sie die mit YOURCODE markierten Stellen</li>
  * </ol>
  * 
- * @see http://localhost:8080/lab-310-javaee-servlet-dynamic-table/dynamic-table
+ * @see http://localhost:8080/lab-310-javaee-servlet-dynamic-table-solution/dynamic-table
  */
 @WebServlet("/dynamic-table")
 public class HtmlTableGeneratingServlet extends HttpServlet {

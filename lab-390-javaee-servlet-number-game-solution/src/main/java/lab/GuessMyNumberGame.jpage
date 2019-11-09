@@ -30,7 +30,7 @@ public class GuessMyNumberGameServlet extends HttpServlet {
 		Random random = new Random();
 		int max;
 		try {
-			max = Integer.valueOf(????); // YOURCODE use the request parameter max 
+			max = Integer.parseInt(????); // YOURCODE use the request parameter max 
 		} catch (NumberFormatException nfe) {
 			max = 100;
 		}

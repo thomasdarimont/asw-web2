@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @see http://localhost:8080/lab-360-javaee-servlet-handoff/handoff/eingabe
+ * @see http://localhost:8080/lab-360-javaee-servlet-handoff-solution/handoff/eingabe?a=1&b=2
  */
 @WebServlet("/handoff/eingabe")
 public class EingabeServlet extends HttpServlet {
