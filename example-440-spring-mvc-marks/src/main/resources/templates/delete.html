@@ -3,8 +3,11 @@
 <head th:replace="~{fragments::head}"></head>
 
 <body class="container">
+
 	<div th:replace="~{fragments::navbar(current=delete)}"></div>
+	
 	<h1>Delete Mark</h1>
+	
 	<form action="delete" method="post">
 		<input type="hidden" name="markId" th:value="${mark.id}">
 

@@ -3,7 +3,9 @@
 <head th:replace="~{fragments::head}"></head>
 
 <body class="container">
+
 	<div th:replace="~{fragments::navbar (current=new)}"></div>
+
 	<h1>Add Mark</h1>
 
 	<form action="/new" method="post" th:object="${newMarkForm}" class="needs-validation">

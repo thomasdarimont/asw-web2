@@ -3,8 +3,11 @@
 <head th:replace="~{fragments::head}"></head>
 
 <body class="container">
+
 	<div th:replace="~{fragments::navbar(current=edit)}"></div>
+	
 	<h1>Edit Mark</h1>
+
 	<form action="/edit" method="post" th:object="${editMarkForm}">
 		<input type="hidden" th:field="*{markId}">
 

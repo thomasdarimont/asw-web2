@@ -61,7 +61,7 @@ class MarksController {
             return "new";
         }
 
-        Course course = courseService.resolveCourse(newMarkForm.getCourseId());
+        Course course = courseService.findCourseByCourseId(newMarkForm.getCourseId());
         Mark mark = new Mark(course, newMarkForm.getScore(), newMarkForm.getDate());
 
         if (markService.isCourseAlreadyGraded(mark.getCourse())) {

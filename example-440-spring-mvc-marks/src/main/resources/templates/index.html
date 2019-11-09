@@ -1,14 +1,8 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="~{fragments::head}">
-<meta charset="UTF-8">
-<title>Marks</title>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- xmlns:th="http://www.thymeleaf.org" activates the thymeleaf dialect for html -->
 
-<script src="/webjars/bootstrap/js/bootstrap.min.js" defer></script>
-<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
-</head>
+<head th:replace="~{fragments::head}"></head>
 
 <body class="container">
 	<div th:replace="~{fragments::navbar(current=index)}"></div>

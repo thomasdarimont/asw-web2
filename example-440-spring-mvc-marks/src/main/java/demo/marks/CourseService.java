@@ -21,7 +21,7 @@ public class CourseService {
 		return COURSES;
 	}
 
-	public Course resolveCourse(String courseId) {
+	public Course findCourseByCourseId(String courseId) {
 
 		for (Course course : findAll()) {
 			if (course.getId().equals(courseId)) {

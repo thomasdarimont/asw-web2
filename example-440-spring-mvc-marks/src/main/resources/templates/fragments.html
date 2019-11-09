@@ -1,24 +1,26 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
+<!-- common metadata header for all application  -->
 <head th:fragment="head">
-<meta charset="UTF-8">
-<title>Marks</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-<script src="/webjars/jquery/jquery.min.js"></script>
-<script src="/webjars/momentjs/min/moment.min.js"></script>
-<script src="/webjars/momentjs/locale/de.js"></script>
-
-<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-<script src="/webjars/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
-<script src="/webjars/font-awesome/js/all.js"></script>
-
-<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/webjars/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
-<link rel="stylesheet" href="/webjars/font-awesome/css/all.css">
+	<meta charset="UTF-8">
+	<title>Marks</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<script src="/webjars/jquery/jquery.min.js"></script>
+	<script src="/webjars/momentjs/min/moment.min.js"></script>
+	<script src="/webjars/momentjs/locale/de.js"></script>
+	
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/webjars/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="/webjars/font-awesome/js/all.js"></script>
+	
+	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/webjars/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
+	<link rel="stylesheet" href="/webjars/font-awesome/css/all.css">
 </head>
 
 <body>
+	<!-- Parameterized reusable fragment 'navbar'. The parameter 'current' contains the name of the active page that should be highlighted  -->
 	<div th:fragment="navbar (current)">
 
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -28,6 +30,7 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
+				<!-- Render navbar with an ul. Mark the current page name with the css class 'active' -->
 				<ul class="navbar-nav">
 					<li class="nav-item" th:classappend="${current == 'index' ? 'active' : ''}">
 						<a class="nav-link" href="/">
