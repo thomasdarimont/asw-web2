@@ -37,7 +37,7 @@ import java.util.List;
  *   curl -v -d '{"title":"test"}' -H "Content-type: application/json" -H "Accept: application/json" http://localhost:8080/resources/todos/search
  *
  *   # search for all todo's with completed = true
- *   curl -v -d '{"title":"test"}' -H "Content-type: application/json" -H "Accept: application/json" http://localhost:8080/todomvc-javaee/resources/todos/search
+ *   curl -v -d '{"completed":true}' -H "Content-type: application/json" -H "Accept: application/json" http://localhost:8080/resources/todos/search
  * }
  * </pre>
  */

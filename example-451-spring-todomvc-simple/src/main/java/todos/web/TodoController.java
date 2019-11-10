@@ -1,10 +1,6 @@
 package todos.web;
 
-import java.net.URI;
-import java.util.List;
-
-import javax.validation.Valid;
-
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,10 +12,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import lombok.RequiredArgsConstructor;
 import todos.Todo;
 import todos.TodoService;
+
+import javax.validation.Valid;
+import java.net.URI;
+import java.util.List;
 
 /**
  * <pre>
@@ -41,7 +39,7 @@ import todos.TodoService;
  *   curl -v -d '{"title":"test"}' -H "Content-type: application/json" -H "Accept: application/json" http://localhost:8090/todos/search
  *
  *   # search for all todo's with completed = true
- *   curl -v -d '{"title":"test"}' -H "Content-type: application/json" -H "Accept: application/json" http://localhost:8090/todos/search
+ *   curl -v -d '{"completed":true}' -H "Content-type: application/json" -H "Accept: application/json" http://localhost:8090/todos/search
  * }
  * </pre>
  */
@@ -50,74 +48,76 @@ import todos.TodoService;
 @RequiredArgsConstructor
 public class TodoController {
 
-	private final TodoService todos;
+    private final TodoService todos;
 
-	@GetMapping
-	public ResponseEntity<?> list() {
-		return ResponseEntity.ok(todos.findAll());
-	}
+    @GetMapping
+    public ResponseEntity<?> list() {
+        return ResponseEntity.ok(todos.findAll());
+    }
 
-	@GetMapping("/{id}")
-	public ResponseEntity<?> getById(@PathVariable Long id) {
-		return todos.getById(id).map(ResponseEntity::ok).orElseGet(ResponseEntity.notFound()::build);
-	}
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getById(@PathVariable Long id) {
+        return todos.getById(id)
+                .map(ResponseEntity::ok)
+                .orElseGet(ResponseEntity.notFound()::build);
+    }
 
-	@PostMapping
-	public ResponseEntity<?> create(@RequestBody @Valid Todo todo, UriComponentsBuilder ucBuilder) {
+    @PostMapping
+    public ResponseEntity<?> create(@RequestBody @Valid Todo todo, UriComponentsBuilder ucBuilder) {
 
-		Todo saved = todos.create(todo);
+        Todo saved = todos.create(todo);
 
-		URI newLocation = ucBuilder.path("/todos/{id}").buildAndExpand(saved.getId()).toUri();
-		return ResponseEntity.created(newLocation).build();
-	}
+        URI newLocation = ucBuilder.path("/todos/{id}").buildAndExpand(saved.getId()).toUri();
+        return ResponseEntity.created(newLocation).build();
+    }
 
-	@PutMapping("/{id}")
-	public ResponseEntity<?> update(@PathVariable Long id, @RequestBody Todo todo) {
+    @PutMapping("/{id}")
+    public ResponseEntity<?> update(@PathVariable Long id, @RequestBody Todo todo) {
 
-		Todo updated = todos.update(id, todo);
+        Todo updated = todos.update(id, todo);
 
-		if (updated == null) {
-			return ResponseEntity.notFound().build();
-		}
+        if (updated == null) {
+            return ResponseEntity.notFound().build();
+        }
 
-		return ResponseEntity.ok(updated);
-	}
+        return ResponseEntity.ok(updated);
+    }
 
-	@PatchMapping("/{id}")
-	public ResponseEntity<?> patch(@PathVariable Long id, @RequestBody Todo todo) {
+    @PatchMapping("/{id}")
+    public ResponseEntity<?> patch(@PathVariable Long id, @RequestBody Todo todo) {
 
-		Todo patched = todos.patchTodo(id, todo);
+        Todo patched = todos.patchTodo(id, todo);
 
-		if (patched == null) {
-			return ResponseEntity.notFound().build();
-		}
+        if (patched == null) {
+            return ResponseEntity.notFound().build();
+        }
 
-		return ResponseEntity.ok(patched);
-	}
+        return ResponseEntity.ok(patched);
+    }
 
-	@DeleteMapping("/{id}")
-	public ResponseEntity<?> remove(@PathVariable Long id) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> remove(@PathVariable Long id) {
 
-		if (todos.deleteById(id)) {
-			return ResponseEntity.noContent().build();
-		}
+        if (todos.deleteById(id)) {
+            return ResponseEntity.noContent().build();
+        }
 
-		return ResponseEntity.notFound().build();
-	}
+        return ResponseEntity.notFound().build();
+    }
 
-	@PostMapping("/search")
-	public ResponseEntity<?> search(@RequestBody Todo example) {
+    @PostMapping("/search")
+    public ResponseEntity<?> search(@RequestBody Todo example) {
 
-		List<?> result = todos.findAllByExample(example);
+        List<?> result = todos.findAllByExample(example);
 
-		return ResponseEntity.ok(result);
-	}
+        return ResponseEntity.ok(result);
+    }
 
-	@GetMapping("/search")
-	public ResponseEntity<?> searchWithParams(Todo example) {
+    @GetMapping("/search")
+    public ResponseEntity<?> searchWithParams(Todo example) {
 
-		List<?> result = todos.findAllByExample(example);
+        List<?> result = todos.findAllByExample(example);
 
-		return ResponseEntity.ok(result);
-	}
+        return ResponseEntity.ok(result);
+    }
 }
