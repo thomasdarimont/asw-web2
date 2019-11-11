@@ -5,7 +5,7 @@ public class SimpleTodoClientApp {
 
     public static void main(String[] args) {
 
-        TodoClient todoClient = new SimpleTodoClient("http://localhost:8090");
+        TodoClient todoClient = new SimpleTodoClient("http://localhost:8080");
 
         System.out.println("ToDos before adding new ToDo");
 

@@ -13,7 +13,7 @@ import java.util.List;
 
 class SimpleTodoClient implements TodoClient {
 
-    private static final String TODOS_ENDPOINT = "/todos";
+    private static final String TODOS_ENDPOINT = "/resources/todos";
 
     private final RestTemplate restTemplate;
 
