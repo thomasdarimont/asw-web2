@@ -9,6 +9,11 @@
     <packaging>pom</packaging>
     <name>asw-web2-2019</name>
 
+    <properties>
+        <java.version>8</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+    </properties>
     <modules>
         <module>example-200-java-refresher</module>
         <module>example-300-javaee-servlet-hello-world</module>
