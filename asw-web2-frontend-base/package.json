@@ -1,0 +1,20 @@
+{
+  "name": "asw-web2-frontend-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/script.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "start": "parcel serve --log-level 4 --public-url / -d dist src/index.html",
+    "watch": "parcel watch --public-url / -d dist src/index.html",
+    "build": "parcel build --public-url / -d dist src/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
+}
