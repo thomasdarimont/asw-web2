@@ -12,18 +12,18 @@ import java.time.LocalDateTime;
 @SpringBootApplication
 public class Example410HelloWorldApplication {
 
-	@RestController
-	@RequestMapping("/hello")
-	public static class HelloController {
+    @RestController
+    @RequestMapping("/hello")
+    public static class HelloController {
 
-		// http://localhost:8080/hello?name=ASW
-		@GetMapping
-		public String greet(@RequestParam String name) {
-			return "Hello " + name + " " + LocalDateTime.now();
-		}
-	}
+        // http://localhost:8080/hello?name=ASW
+        @GetMapping
+        public String greet(@RequestParam String name) {
+            return "Hello " + name + " " + LocalDateTime.now();
+        }
+    }
 
-	public static void main(String[] args) {
-		SpringApplication.run(Example410HelloWorldApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(Example410HelloWorldApplication.class, args);
+    }
 }

@@ -26,9 +26,12 @@
         <module>example-330-javaee-servlet-cookies</module>
         <module>example-340-javaee-servlet-guess-number</module>
         <module>example-400-spring-minimal-app</module>
+        <module>example-401-manual-app-configuration-example</module>
         <module>example-402-spring-dependency-injection-simple</module>
         <module>example-403-spring-dependency-injection-with-scanning</module>
         <module>example-410-spring-hello-world</module>
+        <module>example-412-spring-web-servlet</module>
+        <module>example-413-spring-web-servlet-dynamic-html</module>
         <module>example-420-spring-restcontroller</module>
         <module>example-423-spring-restcontroller-validation</module>
         <module>example-424-spring-restcontroller-content-negotiation</module>
@@ -46,6 +49,5 @@
         <module>lab-375-javaee-servlet-http-sessions</module>
         <module>lab-378-javaee-jsp-system-properties</module>
         <module>lab-390-javaee-servlet-number-game</module>
-        <module>example-401-manual-app-configuration-example</module>
     </modules>
 </project>
