@@ -28,7 +28,7 @@
    </ul>
   </div>
   <div id="hint" class="box"><%=request.getAttribute("hint") != null ? request.getAttribute("hint") : ""%></div>
-  <form action="guess-my-number" method="POST">
+  <form action="/guess-my-number" method="POST">
    <input type="number" name="guess" placeholder="Enter your guess..." required />
    <button>Try</button>
   </form>

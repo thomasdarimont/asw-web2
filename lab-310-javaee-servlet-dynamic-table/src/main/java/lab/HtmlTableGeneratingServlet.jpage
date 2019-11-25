@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  * <li>Implementieren Sie die mit YOURCODE markierten Stellen</li>
  * </ol>
  * 
- * @see http://localhost:8080/lab-310-javaee-servlet-dynamic-table/dynamic-table
+ * @see http://localhost:8080/dynamic-table
  */
 @WebServlet("/dynamic-table")
 public class HtmlTableGeneratingServlet extends HttpServlet {
@@ -37,12 +37,16 @@ public class HtmlTableGeneratingServlet extends HttpServlet {
 		out.println("<body>");
 		out.println("<h2>Dynamische Tabelle</h2>");
 		
-		// we use the String.format(...) method to render a value into a String, that might come in handy later...
+		// we use the String.format(...) method to "render" a value into a String, that might come in handy later...
+		// The first String parameter is the "template". The template can contain placeholders (like %s for Strings and other types...).
+		// The placeholders are provided by the parameters following the template string. They parameter values are inserted at corresponding placeholder indices.
+		// String.format("Hallo %s", "Welt") results in the String "Hallo Welt".
+		// String.format("%s schöne %s", "Hallo", "Welt") results in the String "Hallo schöne Welt".
 		out.println(String.format("<h3>Dynamische Tabelle mit %s Spalten und %s Zeilen</h3>", columns, rows));
 		out.println("<table>");
 		out.println("<thead>");
 		for (int i = 0; i < columns; i++) {
-			out.println(S???.f???("<th>Spalte %s</th>", i));
+			out.println(String.format("<th>Spalte %s</th>", i));
 		}
 		out.println("</thead>");
 		out.println("<tbody>");
@@ -51,14 +55,14 @@ public class HtmlTableGeneratingServlet extends HttpServlet {
 		
 		for (int row = 0; row < rows; row++) {
 		
-			// YOURCODE print a new table row here
+			// YOURCODE start a new table-row element here
 			
 			for (int column = 0; column < columns; column++) {
 				// YOURCODE generate new random value by calling: random.nextInt(1024)
 				// YOURCODE generate <td> element with random value here
 			}
 			
-			// YOURCODE print the table row here
+			// YOURCODE end the table-row element here
 		}
 		out.println("</tbody>");
 		out.println("</table>");
@@ -70,7 +74,7 @@ public class HtmlTableGeneratingServlet extends HttpServlet {
 	private int getIntParameterWithFallback(String name, int fallbackValue, HttpServletRequest request) {
 		try {
 			// YOURCODE read request parameter with the given name
-			return Integer.parseInt(request.???(name));
+			return Integer.parseInt(request.getPar?????(name));
 		} catch (NumberFormatException ignored) {
 			return fallbackValue;
 		}

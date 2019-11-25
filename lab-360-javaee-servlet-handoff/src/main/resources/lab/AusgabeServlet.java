@@ -1,16 +1,14 @@
 package lab;
-
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/handoff/verarbeitung")
-public class VerarbeitungsServlet extends HttpServlet {
+@WebServlet("/handoff/ausgabe")
+public class AusgabeServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
@@ -19,14 +17,12 @@ public class VerarbeitungsServlet extends HttpServlet {
 
 		System.out.printf("Running in %s%n", getClass().getSimpleName());
 
-		Integer a = (Integer) req.???("internalA"); // Read internal attribute internalA
-		Integer b = (Integer) req.???("internalB"); // Read internal attribute internalB
+		Integer a = (Integer) req.getAttribute("internalA");
+		Integer b = (Integer) req.getAttribute("internalB");
+		Integer sum = (Integer) req.getAttribute("sum");
 
-		Integer sum = a + b;
-
-		req.setAttribute("sum", sum);
-
-		RequestDispatcher rd = req.???("/handoff/ausgabe"); // obtain request dispatcher
-		rd.forward(req, resp);
+		// %s Platzhalter für einen String
+		// %n Platzhalter für newline
+		resp.getWriter().printf("%s + %s = %s%n", a, b, sum);
 	}
 }

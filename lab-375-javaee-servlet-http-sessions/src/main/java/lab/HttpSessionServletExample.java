@@ -11,23 +11,23 @@ import javax.servlet.http.HttpSession;
 
 /**
  * <pre>
- * {@code http://localhost:8080/lab-375-javaee-servlet-http-sessions/session }
+ * {@code http://localhost:8080/session }
  * </pre>
  * 
  * <pre>
- * {@code http://localhost:8080/lab-375-javaee-servlet-http-sessions/session?name=test }
+ * {@code http://localhost:8080/session?name=test }
  * </pre>
  * 
  * <pre>
- * {@code http://localhost:8080/lab-375-javaee-servlet-http-sessions/session }
+ * {@code http://localhost:8080/session }
  * </pre>
  * 
  * <pre>
- * {@code http://localhost:8080/lab-375-javaee-servlet-http-sessions/session?kill }
+ * {@code http://localhost:8080/session?kill }
  * </pre>
  *
  * <pre>
- * {@code http://localhost:8080/lab-375-javaee-servlet-http-sessions/session }
+ * {@code http://localhost:8080/session }
  * </pre>
  * 
  * <p>

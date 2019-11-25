@@ -22,7 +22,7 @@ class GreetingController {
         model.addAttribute("greeting", new Greeting("Hello World " + Instant.now()));
 
         // the "View" part of the MVC pattern -> looks for greeting-view.jsp in
-        // src/main/resources/templates
+        // src/main/webapp/WEB-INF/jsp as is configured by src/main/resources/application.properties
         return "greeting-view";
     }
 }

@@ -1,5 +1,4 @@
 package lab;
-
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -19,14 +18,14 @@ public class VerarbeitungsServlet extends HttpServlet {
 
 		System.out.printf("Running in %s%n", getClass().getSimpleName());
 
-		Integer a = (Integer) req.???("internalA"); // Read internal attribute internalA
-		Integer b = (Integer) req.???("internalB"); // Read internal attribute internalB
+		Integer a = (Integer) req.getAttribute("internalA"); // Read internal attribute internalA
+		Integer b = (Integer) req.getAttribute("internalB"); // Read internal attribute internalB
 
 		Integer sum = a + b;
 
 		req.setAttribute("sum", sum);
 
-		RequestDispatcher rd = req.???("/handoff/ausgabe"); // obtain request dispatcher
+		RequestDispatcher rd = req.getRequestDispatcher("/handoff/ausgabe"); // obtain request dispatcher
 		rd.forward(req, resp);
 	}
 }

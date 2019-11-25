@@ -1,6 +1,7 @@
 package lab;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,6 +21,12 @@ public class Servlet2 extends HttpServlet {
 			throws ServletException, IOException {
 
 		System.out.printf("processing...%s%n", request.getRequestURI());
+		
+		try {
+			Thread.sleep(TimeUnit.MILLISECONDS.toMillis((long)(Math.random()*1000)));
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 		response.getWriter().append("Hello from: ").append(request.getRequestURI());
 	}

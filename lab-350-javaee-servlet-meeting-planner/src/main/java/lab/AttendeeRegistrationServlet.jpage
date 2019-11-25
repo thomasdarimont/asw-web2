@@ -19,7 +19,9 @@ import javax.servlet.http.HttpServletResponse;
  * <li>Implementieren Sie die mit YOURCODE markierten Stellen</li>
  * </ol>
  * 
- * @see http://localhost:8080/lab-350-javaee-servlet-meeting-planner/registration.html
+ * Die Datei registration.html findet sich im Verzeichnis src/main/resources/static 
+ * 
+ * @see http://localhost:8080/registration.html
  */
 @???("/registration")
 public class AttendeeRegistrationServlet extends HttpServlet {
@@ -42,8 +44,8 @@ public class AttendeeRegistrationServlet extends HttpServlet {
 
 		response.setContentType("text/html");
 
-		String name = null; // YOURCODE read parameter from request
-		String email = null; // YOURCODE read parameter from request
+		String name = null; // YOURCODE read name parameter from request
+		String email = null; // YOURCODE read email parameter from request
 
 		Attendee inputAttendee = new Attendee(name, email);
 		boolean wasNew = attendees.add(inputAttendee);
@@ -61,11 +63,10 @@ public class AttendeeRegistrationServlet extends HttpServlet {
 
 		out.println("<p>Neuen Teilnehmer <a href=\"registration.html\">registerien</a>?</p>");
 		/*
-		 * YOURCODE -1 is not correct - determine the correct number of
-		 * registered attendees! 
-		 * Hint: find out how to determine the number of entries in a Collection.
+		 * YOURCODE determine the correct number of registered attendees! 
+		 * Hint: find out how to determine the size of the attendees Collection.
 		 */
-		int attendeeCount = -1;
+		int attendeeCount = attendees.?????;
 		out.println(String.format("<h2>Anzahl Teilnehmer %s</h2>", attendeeCount));
 		out.println("<h2>Liste der Teilnehmer</h2>");
 
