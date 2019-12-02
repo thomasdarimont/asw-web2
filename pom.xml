@@ -32,6 +32,11 @@
         <module>example-410-spring-hello-world</module>
         <module>example-412-spring-web-servlet</module>
         <module>example-413-spring-web-servlet-dynamic-html</module>
+        <module>example-415-spring-web-servlet-filter-tracing</module>
+        <module>example-416-spring-web-servlet-sessions</module>
+        <module>example-417-spring-web-servlet-redirects</module>
+        <module>example-418-spring-web-servlet-cookies</module>
+        <module>example-419-spring-web-servlet-guess-my-number</module>
         <module>example-420-spring-restcontroller</module>
         <module>example-423-spring-restcontroller-validation</module>
         <module>example-424-spring-restcontroller-content-negotiation</module>
