@@ -1,0 +1,14 @@
+@startuml HTTP Cookies
+
+header HTTP Cookies
+
+title HTTP Cookies
+
+Client -> Server : <b>POST /login</b>\nusername=user&password=pass
+
+Server -> Client : <b>302 Found</b>\nLocation: http://example.com/members\nset-cookie: session=42
+
+Client -> Server : <b>GET /members</b>\ncookie: session=42
+
+
+@enduml

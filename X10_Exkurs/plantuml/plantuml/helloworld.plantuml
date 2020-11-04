@@ -1,0 +1,19 @@
+@startuml HTTP Kommunikation
+
+header HTTP Kommunikation
+
+== HTTP Kommunikation 1 ==
+
+autonumber 1
+Client -> Server : GET /data HTTP/1.1\nHost: www.example.com
+
+Server -> Client : HTTP/1.1 200 OK\nContent-type: text/htmln\n<html><body>...</body></html>
+
+
+== HTTP Kommunikation 2 ==
+
+Client -> Server : GET /data HTTP/1.1\nHost: www.example.com
+
+Server -> Client : HTTP/1.1 200 OK\nContent-type: text/htmln\n<html><body>...</body></html>
+
+@enduml
