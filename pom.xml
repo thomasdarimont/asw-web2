@@ -7,52 +7,56 @@
     <artifactId>asw-web2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>asw-web2-2019</name>
+    <name>asw-web2</name>
 
     <properties>
-        <java.version>8</java.version>
+        <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
+
     <modules>
-        <module>example-200-java-refresher</module>
-        <module>example-300-javaee-servlet-hello-world</module>
-        <module>example-310-javaee-servlet-dynamic-html</module>
-        <module>example-311-javaee-servlet-calculator-form</module>
-        <module>example-315-javaee-tracing-servlet-filter</module>
-        <module>example-320-javaee-servlet-context-listener</module>
-        <module>example-325-javaee-servlet-http-sessions</module>
-        <module>example-328-javaee-servlet-redirects</module>
-        <module>example-330-javaee-servlet-cookies</module>
-        <module>example-340-javaee-servlet-guess-number</module>
-        <module>example-400-spring-minimal-app</module>
-        <module>example-401-manual-app-configuration-example</module>
-        <module>example-402-spring-dependency-injection-simple</module>
-        <module>example-403-spring-dependency-injection-with-scanning</module>
-        <module>example-410-spring-hello-world</module>
-        <module>example-412-spring-web-servlet</module>
-        <module>example-413-spring-web-servlet-dynamic-html</module>
-        <module>example-415-spring-web-servlet-filter-tracing</module>
-        <module>example-416-spring-web-servlet-sessions</module>
-        <module>example-417-spring-web-servlet-redirects</module>
-        <module>example-418-spring-web-servlet-cookies</module>
-        <module>example-419-spring-web-servlet-guess-my-number</module>
-        <module>example-420-spring-restcontroller</module>
-        <module>example-423-spring-restcontroller-validation</module>
-        <module>example-424-spring-restcontroller-content-negotiation</module>
-        <module>example-425-spring-mvc-intro</module>
-        <module>example-430-spring-web-calculator</module>
-        <module>example-440-spring-mvc-marks</module>
-        <module>example-445-spring-web-jsp</module>
-        <module>example-451-spring-todomvc-simple</module>
-        <module>example-452-spring-todomvc-simple-client</module>
-        <module>example-453-spring-todomvc-webui</module>
-        <module>lab-310-javaee-servlet-dynamic-table</module>
-        <module>lab-350-javaee-servlet-meeting-planner</module>
-        <module>lab-360-javaee-servlet-handoff</module>
-        <module>lab-370-javaee-servlet-filter-tracing</module>
-        <module>lab-375-javaee-servlet-http-sessions</module>
-        <module>lab-378-javaee-jsp-system-properties</module>
-        <module>lab-390-javaee-servlet-number-game</module>
+        <module>C10_Java_Grundlagen/example-200-java-refresher</module>
+        <module>D10_Backend_JavaEE/example-300-javaee-servlet-hello-world</module>
+        <module>D10_Backend_JavaEE/example-310-javaee-servlet-dynamic-html</module>
+        <module>D10_Backend_JavaEE/example-311-javaee-servlet-calculator-form</module>
+        <module>D10_Backend_JavaEE/example-315-javaee-tracing-servlet-filter</module>
+        <module>D10_Backend_JavaEE/example-320-javaee-servlet-context-listener</module>
+        <module>D10_Backend_JavaEE/example-325-javaee-servlet-http-sessions</module>
+        <module>D10_Backend_JavaEE/example-328-javaee-servlet-redirects</module>
+        <module>D10_Backend_JavaEE/example-330-javaee-servlet-cookies</module>
+        <module>D10_Backend_JavaEE/example-340-javaee-servlet-guess-number</module>
+        <module>E10_Backend_SpringBoot/example-400-spring-minimal-app</module>
+        <module>E10_Backend_SpringBoot/example-401-manual-app-configuration-example</module>
+        <module>E10_Backend_SpringBoot/example-402-spring-dependency-injection-simple</module>
+        <module>E10_Backend_SpringBoot/example-403-spring-dependency-injection-with-scanning</module>
+        <module>E10_Backend_SpringBoot/example-410-spring-hello-world</module>
+        <module>E10_Backend_SpringBoot/example-412-spring-web-servlet</module>
+        <module>E10_Backend_SpringBoot/example-413-spring-web-servlet-dynamic-html</module>
+        <module>E10_Backend_SpringBoot/example-415-spring-web-servlet-filter-tracing</module>
+        <module>E10_Backend_SpringBoot/example-416-spring-web-servlet-sessions</module>
+        <module>E10_Backend_SpringBoot/example-417-spring-web-servlet-redirects</module>
+        <module>E10_Backend_SpringBoot/example-418-spring-web-servlet-cookies</module>
+        <module>E10_Backend_SpringBoot/example-419-spring-web-servlet-guess-my-number</module>
+        <module>E10_Backend_SpringBoot/example-420-spring-restcontroller</module>
+        <module>E10_Backend_SpringBoot/example-423-spring-restcontroller-validation</module>
+        <module>E10_Backend_SpringBoot/example-424-spring-restcontroller-content-negotiation</module>
+        <module>E10_Backend_SpringBoot/example-425-spring-mvc-intro</module>
+        <module>E10_Backend_SpringBoot/example-430-spring-web-calculator</module>
+        <module>E10_Backend_SpringBoot/example-440-spring-mvc-marks</module>
+        <module>E10_Backend_SpringBoot/example-445-spring-web-jsp</module>
+        <module>E10_Backend_SpringBoot/example-451-spring-todomvc-simple</module>
+        <module>E10_Backend_SpringBoot/example-452-spring-todomvc-simple-client</module>
+        <module>E10_Backend_SpringBoot/example-453-spring-todomvc-webui</module>
+        <module>E10_Backend_SpringBoot/example-814-spring-web-excel-export</module>
+        <module>L10_Labs/lab-310-javaee-servlet-dynamic-table</module>
+        <module>L10_Labs/lab-350-javaee-servlet-meeting-planner</module>
+        <module>L10_Labs/lab-360-javaee-servlet-handoff</module>
+        <module>L10_Labs/lab-370-javaee-servlet-filter-tracing</module>
+        <module>L10_Labs/lab-375-javaee-servlet-http-sessions</module>
+        <module>L10_Labs/lab-378-javaee-jsp-system-properties</module>
+        <module>L10_Labs/lab-390-javaee-servlet-number-game</module>
     </modules>
 </project>

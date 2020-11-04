@@ -2,7 +2,8 @@
 *-student/
 *-STUDENT/
 *-Student/
-student/*
+S10_Student/student/*
+node_modules/
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
