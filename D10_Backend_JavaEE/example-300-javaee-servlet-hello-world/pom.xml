@@ -7,6 +7,7 @@
 		<artifactId>asw-web2</artifactId>
 		<groupId>com.github.thomasdarimont.aswtraining</groupId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../pom.xml</relativePath>
 	</parent>
 	<artifactId>example-300-javaee-servlet-hello-world</artifactId>
 	<packaging>war</packaging>
