@@ -11,7 +11,7 @@ public class JavaHttpClientExample {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        HttpRequest request = HttpRequest.newBuilder()
+        var request = HttpRequest.newBuilder()
                 .uri(URI.create("https://example.com"))
                 .header("Accept", "text/html")
                 .GET()
@@ -21,7 +21,7 @@ public class JavaHttpClientExample {
 
         var response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-        int statusCode = response.statusCode();
+        var statusCode = response.statusCode();
         System.out.printf("### Status Code: %s%n", statusCode);
 
         HttpHeaders headers = response.headers();
