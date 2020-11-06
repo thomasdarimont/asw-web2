@@ -20,7 +20,10 @@ public class URLComponentExamples {
         System.out.println("Query: " + uri.getQuery());
         System.out.println("Fragment: " + uri.getFragment());
 
+        System.out.println("####");
+
         URL url = uri.toURL();
-        System.out.println("User Info: " +  url.getUserInfo());
+        // URI in URL umwandeln
+        System.out.println("URL " + url);
     }
 }
