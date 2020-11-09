@@ -1,55 +1,57 @@
 # See https://docs.postman-echo.com/
 
-###
+### Simple GET Request with URL query parameters
 
-# curl --location --request GET 'https://postman-echo.com/get?foo1=bar1&foo2=bar2'
+# curl -v --location --request GET 'https://postman-echo.com/get?foo1=bar1&foo2=bar2'
+#
+# Note that the Host header is implied here!
+# The actual request looks like this:
+#    GET /get?foo1=bar1&foo2=bar2 HTTP/2
+#    Host: postman-echo.com
 GET https://postman-echo.com/get?foo1=bar1&foo2=bar2
 
-###
-
+### Send raw form data via HTTP Post
 # curl --location --request POST 'https://postman-echo.com/post'
-#--data-raw 'This is expected to be sent back as part of response body.'
+#      --data-raw 'This is expected to be sent back as part of response body.'
 POST https://postman-echo.com/post
 Content-Type: application/x-www-form-urlencoded
 
 This is expected to be sent back as part of response body.
 
-###
+### Send urlencoded form data via HTTP Post
 
 # curl --location --request POST 'https://postman-echo.com/post'
-#--data-urlencode 'foo1=bar1'
-#--data-urlencode 'foo2=bar2'
+#  --data-urlencode 'foo1=bar1'
+#  --data-urlencode 'foo2=bär2'
 POST https://postman-echo.com/post
 Content-Type: application/x-www-form-urlencoded
 
-foo1=bar1&foo2=bar2
+foo1=bar1&foo2=b<>är2
 
-###
+### Simple PUT request with request body
 
 # curl --location --request PUT 'https://postman-echo.com/put'
-#--data-raw 'This is expected to be sent back as part of response body.'
+#  --data-raw 'This is expected to be sent back as part of response body.'
 PUT https://postman-echo.com/put
 Content-Type: application/x-www-form-urlencoded
 
 This is expected to be sent back as part of response body.
 
-###
+### Simple PATCH request with request body
 
 # curl --location --request PATCH 'https://postman-echo.com/patch'
-#--data-raw 'This is expected to be sent back as part of response body.'
+#  --data-raw 'This is expected to be sent back as part of response body.'
 PATCH https://postman-echo.com/patch
 Content-Type: application/x-www-form-urlencoded
 
 This is expected to be sent back as part of response body.
 
-###
+### Simple DELETE request with request body
 
 # curl --location --request DELETE 'https://postman-echo.com/delete'
-#--data-raw 'This is expected to be sent back as part of response body.'
+#  --data-raw 'This is expected to be sent back as part of response body.'
 DELETE https://postman-echo.com/delete
 Content-Type: application/x-www-form-urlencoded
-
-This is expected to be sent back as part of response body.
 
 ###
 
