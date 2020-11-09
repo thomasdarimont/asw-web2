@@ -1,7 +1,14 @@
 # See https://docs.postman-echo.com/
 
-### Simple GET Request with URL query parameters
 
+### Simple GET Request with explicit configuration
+GET /get HTTP/1.1
+Host: postman-echo.com:443
+
+### Simple GET Request with implicit configuration
+GET https://postman-echo.com/get
+
+### Simple GET Request with URL query parameters
 # curl -v --location --request GET 'https://postman-echo.com/get?foo1=bar1&foo2=bar2'
 #
 # Note that the Host header is implied here!
@@ -9,6 +16,7 @@
 #    GET /get?foo1=bar1&foo2=bar2 HTTP/2
 #    Host: postman-echo.com
 GET https://postman-echo.com/get?foo1=bar1&foo2=bar2
+
 
 ### Send raw form data via HTTP Post
 # curl --location --request POST 'https://postman-echo.com/post'
