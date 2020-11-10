@@ -4,9 +4,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.ignoreCase;
 import static org.springframework.data.domain.ExampleMatcher.matching;
@@ -59,6 +61,26 @@ public class TodoService {
         }
 
         return repository.save(updated);
+    }
+
+    @Transactional
+    public Todo patchTodo(Long id, Todo newTodo) {
+        return Optional.ofNullable(getById(id)) //
+                .map(storedTodo -> patchTodo(storedTodo, newTodo)) //
+                .orElse(null);
+    }
+
+    private Todo patchTodo(Todo storedTodo, Todo newTodo) {
+
+        if (newTodo.getCompleted() != null) {
+            storedTodo.setCompleted(newTodo.getCompleted());
+        }
+
+        if (newTodo.getTitle() != null) {
+            storedTodo.setTitle(newTodo.getTitle());
+        }
+
+        return repository.save(storedTodo);
     }
 
     public List<?> findAllByExample(Todo todo) {
