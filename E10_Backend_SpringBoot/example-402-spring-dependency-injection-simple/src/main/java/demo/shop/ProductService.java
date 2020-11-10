@@ -2,16 +2,26 @@ package demo.shop;
 
 public class ProductService {
 
-	private final CatalogService catalog;
+    /**
+     * Der {@link CatalogService} für Katalogabfragen.
+     */
+    private final CatalogService catalog;
 
-	private final InventoryService inventory;
+    /**
+     * Der {@link InventoryService} für Lagerbestandsinformationen.
+     */
+    private final InventoryService inventory;
 
-	public ProductService(CatalogService catalog, InventoryService inventory) {
-		this.catalog = catalog;
-		this.inventory = inventory;
-	}
+    /**
+     * @param catalog
+     * @param inventory
+     */
+    public ProductService(CatalogService catalog, InventoryService inventory) {
+        this.catalog = catalog;
+        this.inventory = inventory;
+    }
 
-	public String findProductById(String id) {
-		return catalog.findProductById(id) + " available: " + inventory.isProductAvailable(id);
-	}
+    public String findProductById(String id) {
+        return catalog.findProductById(id) + " available: " + inventory.isProductAvailable(id);
+    }
 }

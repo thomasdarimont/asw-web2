@@ -16,7 +16,7 @@ import java.io.PrintWriter;
 @WebServlet("/dynamic-list")
 public class HtmlGeneratingServlet extends HttpServlet {
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         response.setContentType("text/html");
 

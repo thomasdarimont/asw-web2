@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * java -Dgreeting.message=Huhu -jar target/example-405-spring-configuration-properties-0.0.1-SNAPSHOT.jar
  * java -Dgreeting.message=Huhu -Dgreeting.timesToGreet=3 -jar target/example-405-spring-configuration-properties-0.0.1-SNAPSHOT.jar
  *
- * Linux / Cygwin:
+ * Linux / Cygwin / git bash:
  * GREETING_MESSAGE=Hallo java -Dgreeting.timesToGreet=3 -jar target/example-405-spring-configuration-properties-0.0.1-SNAPSHOT.jar
  *
  * Windows

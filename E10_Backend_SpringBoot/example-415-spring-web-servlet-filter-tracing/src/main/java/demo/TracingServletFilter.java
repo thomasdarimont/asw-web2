@@ -9,6 +9,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
 
+/**
+ * ServletFilter zur Ermittlung der Dauer der Request Verarbeitung.
+ */
 @WebFilter(urlPatterns = {"/*"})
 public class TracingServletFilter implements Filter {
 
@@ -19,12 +22,16 @@ public class TracingServletFilter implements Filter {
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
             throws IOException, ServletException {
 
+        // Start Zeit speichern (Millisekunden seit dem 01.01.1970 0:00 Uhr)
         long startTime = System.currentTimeMillis();
         try {
             System.out.println("## before request processing");
             chain.doFilter(request, response);
         } finally {
-            System.out.printf("## after request processing. Processing took %s ms%n", System.currentTimeMillis() - startTime);
+
+            // Zeit Differenz in Millisekunden ausrechnen
+            long durationInMillis = System.currentTimeMillis() - startTime;
+            System.out.printf("## after request processing. Processing took %s ms%n", durationInMillis);
         }
     }
 

@@ -4,16 +4,16 @@ import java.util.List;
 
 public interface TodoService {
 
-	Todo patchTodo(Long id, Todo newTodo);
+    Todo patchTodo(Long id, Todo newTodo);
 
-	Todo updateTodo(Long id, Todo newTodo);
+    Todo updateTodo(Long id, Todo newTodo);
 
-	boolean deleteTodoById(Long id);
+    boolean deleteTodoById(Long id);
 
-	Todo findTodoById(Long id);
+    Todo findTodoById(Long id);
 
-	Todo save(Todo todo);
+    Todo save(Todo todo);
 
-	List<Todo> findAllTodos();
+    List<Todo> findAllTodos();
 
 }

@@ -32,9 +32,11 @@
         <module>E10_Backend_SpringBoot/example-401-manual-app-configuration-example</module>
         <module>E10_Backend_SpringBoot/example-402-spring-dependency-injection-simple</module>
         <module>E10_Backend_SpringBoot/example-403-spring-dependency-injection-with-scanning</module>
+        <module>E10_Backend_SpringBoot/example-405-spring-configuration-properties</module>
         <module>E10_Backend_SpringBoot/example-410-spring-hello-world</module>
         <module>E10_Backend_SpringBoot/example-412-spring-web-servlet</module>
         <module>E10_Backend_SpringBoot/example-413-spring-web-servlet-dynamic-html</module>
+        <module>E10_Backend_SpringBoot/example-414-spring-web-servlet-calculator</module>
         <module>E10_Backend_SpringBoot/example-415-spring-web-servlet-filter-tracing</module>
         <module>E10_Backend_SpringBoot/example-416-spring-web-servlet-sessions</module>
         <module>E10_Backend_SpringBoot/example-417-spring-web-servlet-redirects</module>

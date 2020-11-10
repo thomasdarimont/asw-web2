@@ -8,10 +8,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
+/**
+ * http://localhost:8080/hello
+ */
 @WebServlet(urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         resp.getOutputStream().println("Hello World! " + LocalDateTime.now());
     }
 }
