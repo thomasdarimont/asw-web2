@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.Instant;
 import java.util.Map;
 
 @SpringBootApplication
@@ -23,16 +24,25 @@ public class Lab110HttpRequestsExampleServerApp {
 }
 
 @RestController
+class LabIndexController {
+
+    @GetMapping("/")
+    Object index() {
+        return "Lab Server " + Instant.now();
+    }
+}
+
+@RestController
 @RequestMapping("/ex")
 class LabHttpExercisesController {
 
-    @GetMapping("/simple-get")
-    public Object simpleGet() {
+    @GetMapping("/get-plain")
+    public Object getPlain() {
         return "Success!";
     }
 
-    @GetMapping("/get-with-url-parameters")
-    public ResponseEntity<?> getWithParameters(@RequestParam(required = false) String first, @RequestParam(required = false) String second) {
+    @GetMapping("/get-with-query-parameters")
+    public ResponseEntity<?> getWithQueryParameters(@RequestParam(required = false) String first, @RequestParam(required = false) String second) {
 
         if (first == null || second == null) {
             return ResponseEntity.badRequest().body("Error! Missing or invalid URL parameters: Please send two parameters 'first' and 'second'");
@@ -49,8 +59,8 @@ class LabHttpExercisesController {
         return ResponseEntity.ok("Success!");
     }
 
-    @PostMapping(path = "/post-form-data", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, MediaType.ALL_VALUE})
-    public ResponseEntity<?> sendDataWithPost(@RequestHeader(name = HttpHeaders.CONTENT_TYPE, required = false) String contentType, @RequestParam Map<String, String> body) {
+    @PostMapping(path = "/process-form-data", consumes = {MediaType.APPLICATION_FORM_URLENCODED_VALUE, MediaType.ALL_VALUE})
+    public ResponseEntity<?> processFormData(@RequestHeader(name = HttpHeaders.CONTENT_TYPE, required = false) String contentType, @RequestParam Map<String, String> body) {
 
         if (!MediaType.APPLICATION_FORM_URLENCODED_VALUE.equals(contentType)) {
             return ResponseEntity.badRequest().body("Error! Missing or invalid content-type header: Please use the content-type 'application/x-www-form-urlencoded'");
@@ -74,7 +84,7 @@ class LabHttpExercisesController {
         return ResponseEntity.ok().body("Success!");
     }
 
-    @GetMapping("/get-content-negotiation")
+    @GetMapping("/content-negotiation")
     public ResponseEntity<?> contentNegotiation(@RequestHeader(name = HttpHeaders.ACCEPT, required = false) String acceptHeader) {
 
         if (acceptHeader == null) {
