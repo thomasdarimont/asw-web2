@@ -2,13 +2,20 @@
 
 header HTTP Cookies
 
+'autonumber 1
+
 title HTTP Cookies
 
 Client -> Server : <b>POST /login</b>\nusername=user&password=pass
 
-Server -> Client : <b>302 Found</b>\nLocation: http://example.com/members\nset-cookie: session=42
+Server -> Client : <b>302 Found</b>\nlocation: http://example.com/members\nset-cookie: session=42
 
 Client -> Server : <b>GET /members</b>\ncookie: session=42
 
+Server -> Client : <b>200 OK</b>\ncontent-type: text/html\n\n<html>Hello User...
+
+Client -> Server : <b>POST /logout</b>\ncookie: session=42
+
+Server -> Client : <b>200 OK</b>\ncontent-type: text/html\nset-cookie: session=; Max-Age=0\n\n<html>Logged out...
 
 @enduml
