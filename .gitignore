@@ -2,8 +2,9 @@
 *-student/
 *-STUDENT/
 *-Student/
-S10_Student/student/*
+S10_Student/*
 node_modules/
+!S10_Student/.gitkeep
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
