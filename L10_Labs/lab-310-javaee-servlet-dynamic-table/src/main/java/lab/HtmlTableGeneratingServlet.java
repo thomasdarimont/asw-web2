@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * <ol>
- * <li>Kopieren Sie den Inhalt in eine neue Java Klasse namens HtmlTableGeneratingServlet im selben package</li> 
  * <li>Implementieren Sie die mit YOURCODE markierten Stellen</li>
  * </ol>
  * 
