@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.time.Instant;
 
 /**
+ * http://localhost:8080/greeting
+ *
  * The "Controller" part of the MVC pattern
  */
 @Controller

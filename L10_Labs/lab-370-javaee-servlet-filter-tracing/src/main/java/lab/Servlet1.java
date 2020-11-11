@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @see http://localhost:8080/lab-370-javaee-servlet-filter-tracing/api/servlet1
+ * http://localhost:8080/api/servlet1
  */
 @WebServlet("/api/servlet1")
 public class Servlet1 extends HttpServlet {

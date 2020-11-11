@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Instructions:
  * <ul>
- * <li>Copy the contents of this file into a new file called: GuessMyNumberGame.java in the same package.</li>
+ * <li>Copy the contents of this file into a new file called: GuessMyNumberGameServlet.java in the same package.</li>
  * <li>Make the servlet react to the /guess-my-number URI pattern.</li>
  * <li>Fill in the missing code marked with ????, follow the hints in the comments!</li>
  * </ul>
@@ -65,7 +65,7 @@ public class GuessMyNumberGameServlet extends HttpServlet {
 		}
 
 		//YOURCODE extract the "gameOver" attribute from the HTTP SESSION
-		boolean gameOver = Boolean.valueOf(String.valueOf(????));
+		boolean gameOver = Boolean.parseBoolean(String.valueOf(????));
 		if (gameOver) {
 			request.setAttribute("hint", "You already won! Start a new game :)");
 			forwardToGameJsp(request, response);
@@ -73,7 +73,7 @@ public class GuessMyNumberGameServlet extends HttpServlet {
 		}
 
 		int trials = ((AtomicInteger) session.getAttribute("trialCounter")).incrementAndGet();
-		int guess = Integer.valueOf(request.getParameter("guess"));
+		int guess = Integer.parseInt(request.getParameter("guess"));
 		int draw = (Integer) session.getAttribute("draw");
 
 		String hint;

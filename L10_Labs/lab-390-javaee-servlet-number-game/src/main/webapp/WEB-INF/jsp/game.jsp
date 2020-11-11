@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ASW-WEB2 Student-Files (Complete)</title>
+<title>ASW-WEB2 Student GuessMyNumberGame</title>
 <style>
 * {
  font-size: 32px;

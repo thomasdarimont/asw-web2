@@ -10,8 +10,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-// Add the proper Annotation for Servlet Filters
-@???(urlPatterns = { "???" }) // We want to filter all Requests starting with /api
+// Use the proper Annotation for Servlet Filters
+@???(urlPatterns = { "???" }) // We want to filter all Requests starting with /api/*
 public class TracingServletFilter implements Filter {
 
 	public void init(FilterConfig filterConfig) throws ServletException {

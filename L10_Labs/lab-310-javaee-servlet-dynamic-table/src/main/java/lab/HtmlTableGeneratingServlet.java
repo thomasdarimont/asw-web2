@@ -10,13 +10,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * <ol>
- * <li>Implementieren Sie die mit YOURCODE markierten Stellen</li>
- * </ol>
- * 
- * @see http://localhost:8080/dynamic-table
- */
 @WebServlet("/dynamic-table")
 public class HtmlTableGeneratingServlet extends HttpServlet {
 

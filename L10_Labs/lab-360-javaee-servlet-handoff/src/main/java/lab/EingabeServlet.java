@@ -9,10 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * @see http://localhost:8080/handoff/eingabe
- */
-// Use the proper Annotation for Servlets
+// YOURCODE Use the proper Annotation for Servlets
 @???("/handoff/eingabe")
 public class EingabeServlet extends ??? { // use the proper Base-class for Servlets 
 

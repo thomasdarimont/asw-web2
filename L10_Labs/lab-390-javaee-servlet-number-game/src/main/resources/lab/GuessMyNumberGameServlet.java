@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
  * Instructions:
  * <ul>
  * <li>Copy the contents of this file into a new file called:
- * GuessMyNumberGame.java in the same package.</li>
+ * GuessMyNumberGameServlet.java in the same package.</li>
  * <li>Make the servlet react to the /guess-my-number URI pattern.</li>
  * <li>Fill in the missing code marked with ????, follow the hints in the
  * comments!</li>

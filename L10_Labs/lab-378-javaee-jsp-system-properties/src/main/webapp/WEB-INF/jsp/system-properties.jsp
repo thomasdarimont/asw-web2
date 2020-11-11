@@ -3,7 +3,7 @@
 <html>
 <!-- http://localhost:8080/system-properties -->
 <body>
-<h1>Table with JSP Scriptlets</h1>
+<h1>Java System Properties</h1>
  <table>
   <tr>
    <th>Key</th>
@@ -15,12 +15,11 @@
   %>
   <tr>
     <!-- Output the keys and values as separate <td> elements  -->
-    <td><%= entry.???key() %></td>
-    <td><%= entry.???value() %></td>
+    <td><%= entry.???Key() %></td>
+    <td><%= entry.???Value() %></td>
   </tr>
   <%
-  // close the loop...
-  }
+  } // end for loop
   %>
  </table>
 </body>

@@ -12,15 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * <ol>
- * <li>Implementieren Sie die mit YOURCODE markierten Stellen</li>
- * </ol>
- * 
- * Die Datei registration.html findet sich im Verzeichnis src/main/resources/static 
- * 
- * @see http://localhost:8080/registration.html
- */
+// YOURCODE Use the proper Annotation for Servlets
 @???("/registration")
 public class AttendeeRegistrationServlet extends HttpServlet {
 
@@ -42,8 +34,9 @@ public class AttendeeRegistrationServlet extends HttpServlet {
 
 		response.setContentType("text/html");
 
-		String name = null; // YOURCODE read name parameter from request
-		String email = null; // YOURCODE read email parameter from request
+		// take a look at static/registration.html to find out the proper parameter names for name and email
+		String name = request.???(???); // YOURCODE read the name parameter from request
+		String email = request.???(???); // YOURCODE read the email parameter from request
 
 		Attendee inputAttendee = new Attendee(name, email);
 		boolean wasNew = attendees.add(inputAttendee);
@@ -64,16 +57,19 @@ public class AttendeeRegistrationServlet extends HttpServlet {
 		 * YOURCODE determine the correct number of registered attendees! 
 		 * Hint: find out how to determine the size of the attendees Collection.
 		 */
-		int attendeeCount = attendees.?????;
+		int attendeeCount = attendees.?????();
 		out.println(String.format("<h2>Anzahl Teilnehmer %s</h2>", attendeeCount));
 		out.println("<h2>Liste der Teilnehmer</h2>");
 
-		// YOURCODE start the ordered list here
+		// YOURCODE start the ordered list html-element here
 		for (Attendee attendee : attendees) {
 			// YOURCODE create the list item element here.
-			// Note format the list item text like: Eintrag: Attendee [name=tom, email=test@localhost]
+
+			// Note format the list item text-content like: Eintrag: Attendee [name=tom, email=test@localhost]
 			// hint use the toString() representation of Attendee
+
+			// YOURCODE end the list item element here.
 		}
-		// YOURCODE end the ordered list here
+		// YOURCODE end the ordered list html-element here
 	}
 }

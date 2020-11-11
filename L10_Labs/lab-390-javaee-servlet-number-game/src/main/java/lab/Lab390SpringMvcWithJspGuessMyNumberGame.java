@@ -11,8 +11,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Run with "Run as Java Application" or run in console via:
- * {@code mvn clean spring-boot:run}
+ * In der Datei GuessMyNumberGameServlet.java sollen sie ein kleines Zahlenratespiel implementieren.
+ *
+ * <ol>
+ * <li>Beheben Sie die Java Compiler-Fehler</li>
+ * <li>Implementieren Sie die mit YOURCODE markierten Stellen</li>
+ * </ol>
+ *
+ * Diesmal müssen sie das Beispiel über die Konsole starten.
+ * Öffnen sie dazu ein Terminal (git bash oder cmd) im Projektverzeichnis.
+ * Führen sie anschließend den folgenden Befehl aus: mvn clean spring-boot:run
+ *
+ * Sie können die Anwendung mit der Tastenkombination "Strg+C" stoppen.
+ *
+ * Sie können das Zahlenratespiel über die folgende URL aufrufen: http://localhost:8080/guess-my-number
  */
 @SpringBootApplication
 @ServletComponentScan // Required to find Servlet API components on class-path

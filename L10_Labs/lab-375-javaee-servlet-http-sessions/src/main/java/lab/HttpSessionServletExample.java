@@ -9,34 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * <pre>
- * {@code http://localhost:8080/session }
- * </pre>
- * 
- * <pre>
- * {@code http://localhost:8080/session?name=test }
- * </pre>
- * 
- * <pre>
- * {@code http://localhost:8080/session }
- * </pre>
- * 
- * <pre>
- * {@code http://localhost:8080/session?kill }
- * </pre>
- *
- * <pre>
- * {@code http://localhost:8080/session }
- * </pre>
- * 
- * <p>
- * Cookie Management: Chrome -> Developer Tools -> Application -> Cookies
- * </p>
- * 
- * @author tom
- *
- */
 @WebServlet("/session")
 public class HttpSessionServletExample extends HttpServlet {
 

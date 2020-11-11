@@ -8,8 +8,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
- * Run with "Run as Java Application" or run in console via:
- * {@code mvn clean spring-boot:run}
+ * Die Datei webapp/WEB-INF/jsp/system-properties.jsp enthält ein kleines Beispiel zur Erzeugung einer
+ * HTML Tabelle mit JSP.
+ *
+ * Diesmal müssen sie das Beispiel über die Konsole starten.
+ * Öffnen sie dazu ein Terminal (git bash oder cmd) im Projektverzeichnis.
+ * Führen sie anschließend den folgenden Befehl aus: mvn clean spring-boot:run
+ *
+ * Sie können die Anwendung mit der Tastenkombination "Strg+C" stoppen.
+ *
+ * Sie können die JSP über folgende URL aufrufen: http://localhost:8080/system-properties
  */
 @SpringBootApplication
 public class Lab378SpringMvcWithJsp extends SpringBootServletInitializer {
