@@ -61,6 +61,8 @@ public class CalculatorServlet extends HttpServlet {
 		default:
 			result = null;
 		}
+		
+		System.out.printf("Got %s %s %s = %s via HTTP %s%n", n1 , op, n2, result, req.getMethod());
 
 		resp.getWriter().printf("%s(%s,%s) = %s", op, n1, n2, result);
 	}
