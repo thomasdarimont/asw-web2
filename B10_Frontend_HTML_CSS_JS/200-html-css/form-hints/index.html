@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Hints</title>
+
+    <style>
+        input[type='email']:invalid {
+            border: 1px solid red;
+        }
+
+        input[type='email']:invalid+span::after {
+            color: red;
+            content: " x";
+        }
+
+        input[type='email']:valid+span::after {
+            color: green;
+            content: " ✔";
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <span></span>
+    </form>
+
+</body>
+
+</html>
