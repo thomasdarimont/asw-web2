@@ -14,6 +14,8 @@ import java.net.URI;
 import java.util.List;
 
 /**
+ * A simple {@link RestController} for managing Todo's.
+ *
  * <pre>
  * {@code
  *
@@ -48,6 +50,13 @@ public class TodoResource {
 
     private final TodoService todos;
 
+    /**
+     * Creates a new {@link Todo}.
+     *
+     * @param todo
+     * @param uriBuilder
+     * @return
+     */
     @PostMapping
     public ResponseEntity<Todo> create(@RequestBody Todo todo, UriComponentsBuilder uriBuilder) {
 
@@ -59,6 +68,11 @@ public class TodoResource {
         return ResponseEntity.created(newLocation).build();
     }
 
+    /**
+     * List all {@link Todo Todo's}.
+     *
+     * @return
+     */
     @GetMapping
     public ResponseEntity<List<Todo>> list() {
 
@@ -67,6 +81,12 @@ public class TodoResource {
         return ResponseEntity.ok(this.todos.findAll());
     }
 
+    /**
+     * Find a {@link Todo} by ID.
+     *
+     * @param id
+     * @return
+     */
     @GetMapping("/{id}")
     public ResponseEntity<Todo> getById(@PathVariable("id") Long id) {
 
@@ -80,6 +100,13 @@ public class TodoResource {
         return ResponseEntity.ok(found);
     }
 
+    /**
+     * Update a {@link Todo} referenced by {@code id} with the representation given as {@code todo}.
+     *
+     * @param id
+     * @param todo
+     * @return
+     */
     @PutMapping("/{id}")
     public ResponseEntity<Todo> update(@PathVariable("id") Long id, @RequestBody Todo todo) {
 
@@ -94,6 +121,13 @@ public class TodoResource {
         return ResponseEntity.ok(updated);
     }
 
+    /**
+     * Partially Update a {@link Todo} referenced by {@code id} with the representation given as {@code todo}.
+     *
+     * @param id
+     * @param todo
+     * @return
+     */
     @PatchMapping("/{id}")
     public ResponseEntity<?> patch(@PathVariable Long id, @RequestBody Todo todo) {
 
@@ -108,6 +142,12 @@ public class TodoResource {
         return ResponseEntity.ok(patched);
     }
 
+    /**
+     * Delete the {@link Todo} referenced by {@code id}.
+     *
+     * @param id
+     * @return
+     */
     @DeleteMapping("/{id}")
     public ResponseEntity<?> remove(@PathVariable("id") Long id) {
 
@@ -120,6 +160,12 @@ public class TodoResource {
         return ResponseEntity.notFound().build();
     }
 
+    /**
+     * Search for {@link Todo Todo's} with the provided {@code example}.
+     *
+     * @param example
+     * @return
+     */
     @PostMapping("/search")
     public ResponseEntity<List<?>> search(@RequestBody Todo example) {
 
@@ -130,6 +176,11 @@ public class TodoResource {
         return ResponseEntity.ok(result);
     }
 
+    /**
+     * @see #search(Todo) 
+     * @param example
+     * @return
+     */
     @GetMapping("/search")
     public ResponseEntity<?> searchWithParams(Todo example) {
 
