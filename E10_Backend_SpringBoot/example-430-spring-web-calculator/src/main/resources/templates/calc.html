@@ -1,76 +1,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-<meta charset="UTF-8">
-<title>Calculator</title>
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<script src="/webjars/bootstrap/js/bootstrap.min.js" defer></script>
-<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <script src="/webjars/bootstrap/js/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css"/>
 </head>
 
 <body>
 
-	<div class="container">
-		<h1>Calculate via HTTP GET</h1>
-		<form action="calculate">
-			<!-- <form action="calculate" method="get"> -->
-			<!-- GET is default method -->
-
-			<div class="row">
-
-				<div class="col-md2">
-					<input name="n1" type="number" class="form-control" th:value="${n1}" required
-						autofocus>
-				</div>
-
-				<div class="col-md2">
-					<button name="op" value="PLUS" class="btn btn-light mb-1">+</button>
-					<button name="op" value="MINUS" class="btn btn-light mb-1">-</button>
-					<button name="op" value="MULTIPLY" class="btn btn-light mb-1">*</button>
-					<button name="op" value="DIVIDE" class="btn btn-light mb-1">/</button>
-				</div>
-
-				<div class="col-md2">
-					<input name="n2" type="number" class="form-control" th:value="${n2}" required>
-				</div>
-
-				<div th:if="${resultGet}" class="col-md2">
-					<span>=</span>
-					<output name="resultGet" th:text="${resultGet}"></output>
-				</div>
-			</div>
-		</form>
-	</div>
-
-	<div class="container">
-		<h1>Calculate via HTTP POST</h1>
-		<form action="calculate" method="post">
-			<div class="row">
-				<div class="col-md2">
-					<input name="n1" type="number" class="form-control"
-						th:value="${n1}" required autofocus>
-				</div>
-
-				<div class="col-md2">
-					<button name="op" value="PLUS" class="btn btn-light mb-1">+</button>
-					<button name="op" value="MINUS" class="btn btn-light mb-1">-</button>
-					<button name="op" value="MULTIPLY" class="btn btn-light mb-1">*</button>
-					<button name="op" value="DIVIDE" class="btn btn-light mb-1">/</button>
-				</div>
-
-				<div class="col-md2">
-					<input name="n2" type="number" class="form-control"
-						th:value="${n2}" required>
-				</div>
-
-				<div class="col-md2" th:if="${resultPost}">
-					<span>=</span>
-					<output name="resultPost" th:text="${resultPost}"></output>
-				</div>
-			</div>
-		</form>
-	</div>
+<div class="container">
+    <a href="/calc_get"><h1>Calculate via HTTP GET</h1></a>
+    <a href="/calc_post"><h1>Calculate via HTTP POST</h1></a>
+</div>
 </body>
 </html>
