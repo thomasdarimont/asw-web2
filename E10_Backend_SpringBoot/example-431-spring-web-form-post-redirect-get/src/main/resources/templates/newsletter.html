@@ -1,0 +1,32 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <script src="/webjars/bootstrap/js/bootstrap.min.js" defer></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Newsletter abonnieren</h1>
+    <form action="/newsletter/register" method="post">
+
+        <div class="row">
+
+            <div class="col-md2">
+                <input name="email" type="email" class="form-control" placeholder="Email eingeben..." required autofocus>
+            </div>
+
+            <div class="col-md2">
+                <input type="submit" class="form-control" value="Abonnieren">
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
