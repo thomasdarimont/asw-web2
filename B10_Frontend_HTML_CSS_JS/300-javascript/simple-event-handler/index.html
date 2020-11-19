@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler Example</title>
+</head>
+
+<body>
+
+    <a id="mylink" href="/">Click me</a>
+
+    <script>
+
+        let element = document.getElementById("mylink");
+
+        let handler = function (event) { // Event Handler Funktion
+
+            let message = "Hello, you clicked on " + event.target;
+
+            console.log(message);
+            alert(message);
+
+            // return false; // verhindert default Aktion (wie abrufen eines Links etc.)
+        };
+
+        element.onclick = handler;
+    </script>
+</body>
+
+</html>
