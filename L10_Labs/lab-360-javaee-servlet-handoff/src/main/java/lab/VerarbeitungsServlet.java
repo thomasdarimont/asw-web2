@@ -19,14 +19,22 @@ public class VerarbeitungsServlet extends HttpServlet {
 
 		System.out.printf("Running in %s%n", getClass().getSimpleName());
 
-		Integer a = (Integer) req.???("internalA"); // Read internal attribute internalA
-		Integer b = (Integer) req.???("internalB"); // Read internal attribute internalB
+		Integer a = 
+			// (Integer) req.???("internalA"); // Read internal attribute internalA
+			null; // remove this line
+
+		Integer b = 
+			// (Integer) req.???("internalB"); // Read internal attribute internalB
+			null; // remove this line
 
 		Integer sum = a + b;
 
 		req.setAttribute("sum", sum);
 
-		RequestDispatcher rd = req.???("/handoff/ausgabe"); // obtain request dispatcher
+		RequestDispatcher rd = 
+				// req.???("/handoff/ausgabe"); // obtain request dispatcher
+				null; // remove this line
+
 		rd.forward(req, resp);
 	}
 }

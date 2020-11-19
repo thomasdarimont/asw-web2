@@ -10,14 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 // YOURCODE Use the proper Annotation for Servlets
-@???("/handoff/eingabe")
-public class EingabeServlet extends ??? { // use the proper Base-class for Servlets 
+// @???("/handoff/eingabe")
+public class EingabeServlet extends 
+	//	??? { // use the proper Base-class for Servlets 
+	 { // remove this line
 
 	private static final long serialVersionUID = 1L;
 
 	// Hint: we need to handle HTTP GET Requests with this method
-	@Override
-	protected void ???(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	// protected void ???(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void tuGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { // remove this line
 
 		System.out.printf("Running in %s%n", getClass().getSimpleName());
 
@@ -26,8 +28,13 @@ public class EingabeServlet extends ??? { // use the proper Base-class for Servl
 			return;
 		}
 
-		Integer a = Integer.valueOf(req.???("a")); // read parameter a from request
-		Integer b = Integer.valueOf(req.???("b")); // read parameter b from request
+		Integer a = 
+			// Integer.valueOf(req.???("a")); // read parameter a from request
+			null; // remove this line
+
+		Integer b = 
+			// Integer.valueOf(req.???("b")); // read parameter b from request
+			null; // remove this line
 
 		req.setAttribute("internalA", a); // pass value of parameter a as internal attribute internalA to other servlets 
 		req.setAttribute("internalB", b); // ~ ...

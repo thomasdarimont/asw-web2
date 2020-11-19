@@ -18,9 +18,9 @@ public class AusgabeServlet extends HttpServlet {
 
 		System.out.printf("Running in %s%n", getClass().getSimpleName());
 
-		Integer a = (Integer) req.getAttribute("???");
-		Integer b = (Integer) req.getAttribute("???");
-		Integer sum = (Integer) req.getAttribute("???");
+		Integer a = (Integer) req.getAttribute("???"); // read proper attribute for a
+		Integer b = (Integer) req.getAttribute("???"); // read proper attribute for b
+		Integer sum = (Integer) req.getAttribute("???");  // read proper attribute for sum
 
 		// %s Platzhalter für einen String
 		// %n Platzhalter für newline

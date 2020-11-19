@@ -66,7 +66,8 @@ public class HtmlTableGeneratingServlet extends HttpServlet {
 	private int getIntParameterWithFallback(String name, int fallbackValue, HttpServletRequest request) {
 		try {
 			// YOURCODE read request parameter with the given name
-			return Integer.parseInt(request.getPar?????(name));
+			// return Integer.parseInt(request.getPar?????(name));
+			return -1; // REMOVE this line
 		} catch (NumberFormatException ignored) {
 			return fallbackValue;
 		}

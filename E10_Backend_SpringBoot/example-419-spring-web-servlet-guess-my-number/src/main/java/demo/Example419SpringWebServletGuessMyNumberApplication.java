@@ -4,6 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
+/**
+ * http://localhost:8080/game.html
+ */
 @SpringBootApplication
 @ServletComponentScan // Required to find Servlet API components on class-path
 public class Example419SpringWebServletGuessMyNumberApplication {

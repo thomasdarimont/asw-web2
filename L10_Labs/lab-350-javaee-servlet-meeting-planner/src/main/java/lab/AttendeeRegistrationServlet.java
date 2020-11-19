@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 // YOURCODE Use the proper Annotation for Servlets
-@???("/registration")
+// @???("/registration")
 public class AttendeeRegistrationServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -35,8 +35,12 @@ public class AttendeeRegistrationServlet extends HttpServlet {
 		response.setContentType("text/html");
 
 		// take a look at static/registration.html to find out the proper parameter names for name and email
-		String name = request.???(???); // YOURCODE read the name parameter from request
-		String email = request.???(???); // YOURCODE read the email parameter from request
+		String name = 
+				//request.???(???); // YOURCODE read the name parameter from request
+				null; // remove this line
+		String email = 
+				// request.???(???); // YOURCODE read the email parameter from request
+				null; // remove this line
 
 		Attendee inputAttendee = new Attendee(name, email);
 		boolean wasNew = attendees.add(inputAttendee);
@@ -52,12 +56,14 @@ public class AttendeeRegistrationServlet extends HttpServlet {
 
 	private void printAttendeeListing(PrintWriter out) {
 
-		out.println("<p>Neuen Teilnehmer <a href=\"registration.html\">registerien</a>?</p>");
+		out.println("<p>Neuen Teilnehmer <a href=\"registration.html\">registrieren</a>?</p>");
 		/*
 		 * YOURCODE determine the correct number of registered attendees! 
 		 * Hint: find out how to determine the size of the attendees Collection.
 		 */
-		int attendeeCount = attendees.?????();
+		int attendeeCount = 
+				// attendees.?????();
+				-1; // remove this line
 		out.println(String.format("<h2>Anzahl Teilnehmer %s</h2>", attendeeCount));
 		out.println("<h2>Liste der Teilnehmer</h2>");
 
