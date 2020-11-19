@@ -1,7 +1,6 @@
 package todos.rest;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -177,7 +176,7 @@ public class TodoResource {
     }
 
     /**
-     * @see #search(Todo) 
+     * @see #search(Todo)
      * @param example
      * @return
      */
