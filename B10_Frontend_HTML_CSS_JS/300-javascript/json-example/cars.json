@@ -1,0 +1,12 @@
+[
+    {
+        "brand": "VW",
+        "model": "Lupo",
+        "buildYear": 2003
+    },
+    {
+        "brand": "VW",
+        "model": "Golf",
+        "buildYear": 2016
+    }
+]
