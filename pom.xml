@@ -57,6 +57,7 @@
         <module>E10_Backend_SpringBoot/example-453-spring-todomvc-webui</module>
         <module>E10_Backend_SpringBoot/example-814-spring-web-excel-export</module>
         <module>L10_Labs/lab-110-http-requests-example-server</module>
+        <module>X10_Exkurs/java-maven-example</module>
         <!--
         <module>L10_Labs/lab-310-javaee-servlet-dynamic-table</module>
         <module>L10_Labs/lab-350-javaee-servlet-meeting-planner</module>
