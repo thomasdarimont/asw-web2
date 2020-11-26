@@ -8,6 +8,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+/**
+ * Run with Jetty:
+ * 0) cd into example-300-javaee-servlet-hello-world directory
+ * 1) mvn jetty:run
+ * 2) Browse to http://localhost:8080/calc.html
+ */
 @WebServlet("/calculate")
 public class CalculatorServlet extends HttpServlet {
 
@@ -16,9 +23,9 @@ public class CalculatorServlet extends HttpServlet {
 	/**
 	 * Called via HTTP GET with parameters passed in via URL.
 	 * 
-	 * @see http://localhost:8080/example-311-javaee-servlet-calculator-form/calc_with_get.html
+	 * http://localhost:8080/calc_with_get.html
 	 * 
-	 * @see http://localhost:8080/example-311-javaee-servlet-calculator-form/calculate?n1=10&n2=30&op=add
+	 * http://localhost:8080/calculate?n1=10&n2=30&op=add
 	 * 
 	 * @param req
 	 * @param resp
@@ -34,7 +41,7 @@ public class CalculatorServlet extends HttpServlet {
 	/**
 	 * Called via HTTP POST with parameters passed in in the Request Body.
 	 * 
-	 * @see http://localhost:8080/example-311-javaee-servlet-calculator-form/calc_with_post.html
+	 * http://localhost:8080/calc_with_post.html
 	 * 
 	 * @param req
 	 * @param resp

@@ -10,26 +10,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * <pre>
- * {@code http://localhost:8080/example-325-javaee-servlet-http-sessions/session }
- * </pre>
- * 
- * <pre>
- * {@code http://localhost:8080/example-325-javaee-servlet-http-sessions/session?name=test }
- * </pre>
- * 
- * <pre>
- * {@code http://localhost:8080/example-325-javaee-servlet-http-sessions/session }
- * </pre>
- * 
- * <pre>
- * {@code http://localhost:8080/example-325-javaee-servlet-http-sessions/session?kill }
- * </pre>
+ * Run with Jetty:
+ * 1) mvn jetty:run
+ * 2) Browse to http://localhost:8080/session and inspect cookies ->  JSessionID cookie should be present, take note of sessionId
+ * 3) Browse to http://localhost:8080/session?name=World to set the name attribute in the session to "test"
+ * 4) Browse to http://localhost:8080/session and inspect cookies -> now we should see name read from the session
+ * 5) Browse to http://localhost:8080/session?kill inspect cookies ->  there should now be a NEW JSessionID cookie
+ * 6) Browse to http://localhost:8080/session?name=ASW to start anew
  *
- * <pre>
- * {@code http://localhost:8080/example-325-javaee-servlet-http-sessions/session }
- * </pre>
- * 
+ * To inspect cookies, you can use the Browser Dev Tools
  * <p>
  * Cookie Management: Chrome -> Developer Tools -> Application -> Cookies
  * </p>

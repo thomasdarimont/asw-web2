@@ -10,19 +10,20 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @see http://localhost:8080/example-328-javaee-servlet-redirects/redirect-int
- * @author tom
- *
+ * Run with Jetty:
+ * 1) mvn jetty:run
+ * 2) Browse to http://localhost:8080/redirect-int
  */
 @WebServlet("/redirect-int")
 public class InternalRedirectionServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/secret/index.jsp");
-		dispatcher.forward(req, resp);
-	}
+        // redirects internally (no HTTP redirect)
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/secret/index.jsp");
+        dispatcher.forward(req, resp);
+    }
 }

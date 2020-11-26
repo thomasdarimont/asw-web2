@@ -2,6 +2,7 @@ package demo;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,23 +11,29 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @see http://localhost:8080/example-315-javaee-tracing-servlet-filter/process
+ * Run with Jetty:
+ * 0) cd into example-300-javaee-servlet-hello-world directory
+ * 1) mvn jetty:run
+ * 2) Browse to http://localhost:8080/process
  */
 @WebServlet("/process")
 public class ProcessingServlet extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-		System.out.println("Processing request...");
-		try {
-			Thread.sleep((long) (Math.random() * 1000L));
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		
-		resp.getWriter().println("Processing completed " + LocalDateTime.now());
-	}
+        String requestId = (String) req.getAttribute("requestId");
+
+        System.out.println("Start processing request. requestId=" + requestId);
+        try {
+            System.out.println("Pretending to do some important work for request. requestId=" + requestId);
+            Thread.sleep((long) (Math.random() * 3000L));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        resp.getWriter().println("Processing completed for request " + LocalDateTime.now() + ". requestId=" + requestId);
+    }
 
 }

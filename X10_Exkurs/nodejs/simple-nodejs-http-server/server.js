@@ -12,11 +12,11 @@ const requestHandler = (request, response) => {
 
     console.log("%s | Got request: method=%s url=%s headers=%s", new Date(), method, url, JSON.stringify(rawHeaders));
 
-    const message = "Hello World from NodeJS! " + new Date();
+    const message = "Hello World from NodeJS! " + new Date().toISOString();
 
     // write http response
     response.writeHead(200, {"Content-type": "text/html"});
-    response.end(`<h1>${message}</h1>\n`);
+    response.end(`<h2>${message}</h2>`);
 };
 
 // Configure HTTP server with our request handler as default handler

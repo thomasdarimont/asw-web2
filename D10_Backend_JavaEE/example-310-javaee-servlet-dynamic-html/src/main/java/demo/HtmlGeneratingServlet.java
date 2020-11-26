@@ -10,8 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * Run with Jetty:
+ * 0) cd into example-300-javaee-servlet-hello-world directory
+ * 1) mvn jetty:run
+ * 2) Browse to http://localhost:8080/dynamic-list
+ * 3) Browse to http://localhost:8080/dynamic-list?count=100
+ *
  * http://localhost:8080/example-310-javaee-servlet-dynamic-html/dynamic-list
- * 
  * http://localhost:8080/example-310-javaee-servlet-dynamic-html/dynamic-list?count=100
  */
 @WebServlet("/dynamic-list")

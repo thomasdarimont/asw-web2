@@ -5,15 +5,19 @@ import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
 @WebListener
-public class WebListenerExample implements ServletContextListener {
+public class ExampleWebListener implements ServletContextListener {
 
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
-		System.out.println("Context Initalized: " + sce.getServletContext().getContextPath());
+
+		// Here you can add code that should run when your application starts
+		System.out.println("### Web App Started");
 	}
 
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
-		System.out.println("Context Destroyed: " + sce.getServletContext().getContextPath());
+
+		// Here you can add code that should run when your application stops
+		System.out.println("### Web App Destroyed");
 	}
 }

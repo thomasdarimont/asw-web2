@@ -13,6 +13,9 @@
         <java.version>11</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
+
+        <jetty.scanIntervalSeconds>1</jetty.scanIntervalSeconds>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -64,4 +67,16 @@
         <module>L10_Labs/lab-390-javaee-servlet-number-game</module>
         -->
     </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-maven-plugin</artifactId>
+                    <version>9.4.35.v20201120</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

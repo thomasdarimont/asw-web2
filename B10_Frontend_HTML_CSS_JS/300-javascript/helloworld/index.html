@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Hello World</title>
     <script>
@@ -7,8 +8,33 @@
         // console.log("Hello via console!");
     </script>
 </head>
+
 <body>
+    <h1 id="message">Hallo JavaScript</h1>
+    <h1 id="otherMessage">Other Message</h1>
+
+    <button onclick="greet('Huhu ASW')">Change greeting</button>
+
+    <div>
+    <a href="https://www.google.de">Google</a>
+</div>
+
+    <script>
+
+document.getElementsByTagName("a")[0].onclick = onLinkClick;
+
+function onLinkClick(evt) {
+    alert(evt.currentTarget.href);
+
+    evt.preventDefault();
+}
+
+
+function greet(message) {
+    document.getElementById("message").textContent = message;
+}
+
+    </script>
 </body>
+
 </html>
-
-

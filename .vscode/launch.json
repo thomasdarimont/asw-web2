@@ -1,0 +1,267 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Attach) - Remote example-300-javaee-servlet-hello-world",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": "8000",
+            "projectName": "example-300-javaee-servlet-hello-world"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ApiDemo<example-200-java-refresher>",
+            "request": "launch",
+            "mainClass": "de.asw.training.api.ApiDemo",
+            "projectName": "example-200-java-refresher"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-NashornJavaScriptEngineDemo<example-200-java-refresher>",
+            "request": "launch",
+            "mainClass": "de.asw.training.js.NashornJavaScriptEngineDemo",
+            "projectName": "example-200-java-refresher"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-JavaHttpClientExample<example-200-java-refresher>",
+            "request": "launch",
+            "mainClass": "de.asw.training.net.JavaHttpClientExample",
+            "projectName": "example-200-java-refresher"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PlainSocketHttpRequestExample<example-200-java-refresher>",
+            "request": "launch",
+            "mainClass": "de.asw.training.net.PlainSocketHttpRequestExample",
+            "projectName": "example-200-java-refresher"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-URLComponentExamples<example-200-java-refresher>",
+            "request": "launch",
+            "mainClass": "de.asw.training.net.URLComponentExamples",
+            "projectName": "example-200-java-refresher"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ReflectionDemo1FieldReflection<example-200-java-refresher>",
+            "request": "launch",
+            "mainClass": "de.asw.training.reflection.ReflectionDemo1FieldReflection",
+            "projectName": "example-200-java-refresher"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ReflectionDemo2AnalyzeAndModify<example-200-java-refresher>",
+            "request": "launch",
+            "mainClass": "de.asw.training.reflection.ReflectionDemo2AnalyzeAndModify",
+            "projectName": "example-200-java-refresher"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-HelloWorld<example-200-java-refresher>",
+            "request": "launch",
+            "mainClass": "de.asw.training.start.HelloWorld",
+            "projectName": "example-200-java-refresher"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example400HelloWorldApplication<example-400-spring-minimal-app>",
+            "request": "launch",
+            "mainClass": "demo.Example400HelloWorldApplication",
+            "projectName": "example-400-spring-minimal-app"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example401ManualConfigurationApp<example-401-manual-app-configuration-example>",
+            "request": "launch",
+            "mainClass": "demo.Example401ManualConfigurationApp",
+            "projectName": "example-401-manual-app-configuration-example"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example402DependencyInjectionSimple<example-402-spring-dependency-injection-simple>",
+            "request": "launch",
+            "mainClass": "demo.Example402DependencyInjectionSimple",
+            "projectName": "example-402-spring-dependency-injection-simple"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example403DependencyInjectionWithScanning<example-403-spring-dependency-injection-with-scanning>",
+            "request": "launch",
+            "mainClass": "demo.Example403DependencyInjectionWithScanning",
+            "projectName": "example-403-spring-dependency-injection-with-scanning"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example405SpringConfigurationPropertiesApplication<example-405-spring-configuration-properties>",
+            "request": "launch",
+            "mainClass": "demo.Example405SpringConfigurationPropertiesApplication",
+            "projectName": "example-405-spring-configuration-properties"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example410HelloWorldApplication<example-410-spring-hello-world>",
+            "request": "launch",
+            "mainClass": "demo.Example410HelloWorldApplication",
+            "projectName": "example-410-spring-hello-world"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example412SpringWebServletApplication<example-412-spring-web-servlet>",
+            "request": "launch",
+            "mainClass": "demo.Example412SpringWebServletApplication",
+            "projectName": "example-412-spring-web-servlet"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example413SpringWebServletDynamicTableApplication<example-413-spring-web-servlet-dynamic-html>",
+            "request": "launch",
+            "mainClass": "demo.Example413SpringWebServletDynamicTableApplication",
+            "projectName": "example-413-spring-web-servlet-dynamic-html"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example414SpringWebServletCalculatorApplication<example-414-spring-web-servlet-calculator>",
+            "request": "launch",
+            "mainClass": "demo.Example414SpringWebServletCalculatorApplication",
+            "projectName": "example-414-spring-web-servlet-calculator"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example415SpringWebServletFilterTracingApplication<example-415-spring-web-servlet-filter-tracing>",
+            "request": "launch",
+            "mainClass": "demo.Example415SpringWebServletFilterTracingApplication",
+            "projectName": "example-415-spring-web-servlet-filter-tracing"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example416SpringWebServletSessionsApplication<example-416-spring-web-servlet-sessions>",
+            "request": "launch",
+            "mainClass": "demo.Example416SpringWebServletSessionsApplication",
+            "projectName": "example-416-spring-web-servlet-sessions"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example417SpringWebServletRedirectsApplication<example-417-spring-web-servlet-redirects>",
+            "request": "launch",
+            "mainClass": "demo.Example417SpringWebServletRedirectsApplication",
+            "projectName": "example-417-spring-web-servlet-redirects"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example418SpringWebServletCookiesApplication<example-418-spring-web-servlet-cookies>",
+            "request": "launch",
+            "mainClass": "demo.Example418SpringWebServletCookiesApplication",
+            "projectName": "example-418-spring-web-servlet-cookies"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example419SpringWebServletGuessMyNumberApplication<example-419-spring-web-servlet-guess-my-number>",
+            "request": "launch",
+            "mainClass": "demo.Example419SpringWebServletGuessMyNumberApplication",
+            "projectName": "example-419-spring-web-servlet-guess-my-number"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example420RestControllerApplication<example-420-spring-restcontroller>",
+            "request": "launch",
+            "mainClass": "demo.Example420RestControllerApplication",
+            "projectName": "example-420-spring-restcontroller"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example423RestControllerValidationApplication<example-423-spring-restcontroller-validation>",
+            "request": "launch",
+            "mainClass": "demo.Example423RestControllerValidationApplication",
+            "projectName": "example-423-spring-restcontroller-validation"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example424RestControllerContentNegotiationApp<example-424-spring-restcontroller-content-negotiation>",
+            "request": "launch",
+            "mainClass": "demo.Example424RestControllerContentNegotiationApp",
+            "projectName": "example-424-spring-restcontroller-content-negotiation"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example425SpringMvcIntro<example-425-spring-mvc-intro>",
+            "request": "launch",
+            "mainClass": "demo.Example425SpringMvcIntro",
+            "projectName": "example-425-spring-mvc-intro"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example430HelloWorldApplication<example-430-spring-web-calculator>",
+            "request": "launch",
+            "mainClass": "demo.Example430HelloWorldApplication",
+            "projectName": "example-430-spring-web-calculator"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example431PostRedirectGetFormApp<example-431-spring-web-form-post-redirect-get>",
+            "request": "launch",
+            "mainClass": "demo.Example431PostRedirectGetFormApp",
+            "projectName": "example-431-spring-web-form-post-redirect-get"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example440SpringMvcMarksApp<example-440-spring-mvc-marks>",
+            "request": "launch",
+            "mainClass": "demo.Example440SpringMvcMarksApp",
+            "projectName": "example-440-spring-mvc-marks"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example445SpringMvcWithJsp<example-445-spring-web-jsp>",
+            "request": "launch",
+            "mainClass": "demo.Example445SpringMvcWithJsp",
+            "projectName": "example-445-spring-web-jsp"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-App<example-451-spring-todomvc-simple>",
+            "request": "launch",
+            "mainClass": "todos.App",
+            "projectName": "example-451-spring-todomvc-simple"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SimpleTodoClientApp<example-452-spring-todomvc-simple-client>",
+            "request": "launch",
+            "mainClass": "demo.SimpleTodoClientApp",
+            "projectName": "example-452-spring-todomvc-simple-client"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TodosApp<example-453-spring-todomvc-webui>",
+            "request": "launch",
+            "mainClass": "todos.TodosApp",
+            "projectName": "example-453-spring-todomvc-webui"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Example814SpringWebExcelExportApp<example-814-spring-web-excel-export>",
+            "request": "launch",
+            "mainClass": "demo.Example814SpringWebExcelExportApp",
+            "projectName": "example-814-spring-web-excel-export"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Lab110HttpRequestsExampleServerApp<lab-110-http-requests-example-server>",
+            "request": "launch",
+            "mainClass": "training.Lab110HttpRequestsExampleServerApp",
+            "projectName": "lab-110-http-requests-example-server"
+        }
+    ]
+}

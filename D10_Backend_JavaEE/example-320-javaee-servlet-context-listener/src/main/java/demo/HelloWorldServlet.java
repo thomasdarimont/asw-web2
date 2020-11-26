@@ -10,7 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * http://localhost:8080/example-320-javaee-servlet-context-listener/hello
+ * Run with Jetty:
+ * 1) mvn jetty:run
+ * 2) Browse to http://localhost:8080/hello
+ * 3) Watch for log messages from ExampleWebListener
  */
 @WebServlet(urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
@@ -19,6 +22,6 @@ public class HelloWorldServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		resp.getOutputStream().println("Hello World! " + LocalDateTime.now());
+		resp.getOutputStream().println("Hello ASW! " + LocalDateTime.now());
 	}
 }
