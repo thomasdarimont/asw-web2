@@ -11,4 +11,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @interface Example {
 	String value() default "Beispiel";
+	
+	String level() default "easy";
 }
