@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,6 +13,15 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
+ * 
+ * Simple number guessing game with servlets.
+ *
+ * Run via with Jetty from Eclipse:
+ * 0) select project
+ * 1) Run as maven build...
+ * 2) Goals: jetty:run
+ * 3) Browse to the URLs listed below
+ * 
  * Run with Jetty:
  * 1) mvn jetty:run
  * 2) Browse to http://localhost:8080/game.jsp
@@ -81,6 +91,8 @@ public class GuessMyNumberGameServlet extends HttpServlet {
 
     private void forwardToGameJsp(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getRequestDispatcher("game.jsp").forward(request, response);
+        
+    	RequestDispatcher requestDispatcher = request.getRequestDispatcher("game.jsp");
+		requestDispatcher.forward(request, response);
     }
 }

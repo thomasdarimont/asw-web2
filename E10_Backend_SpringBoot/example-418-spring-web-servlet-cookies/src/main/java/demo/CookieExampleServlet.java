@@ -1,5 +1,6 @@
 package demo;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -20,33 +21,71 @@ public class CookieExampleServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
-        if (req.getParameter("kill") != null) {
-            Cookie cookieToDelete = new Cookie("name", "");
-            cookieToDelete.setMaxAge(0);
-            resp.addCookie(cookieToDelete);
-            resp.getOutputStream().println("Cookie deleted!");
-            return;
-        }
+    private static final String COOKIE_NAME = "mycookie";
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String name = req.getParameter("name");
 
-        if (name == null && req.getCookies() != null) {
-            for (Cookie cookie : req.getCookies()) {
-                if (cookie.getName().equals("name")) {
-                    name = cookie.getValue();
-                    break;
-                }
-            }
-        } else {
-            Cookie nameCookie = new Cookie("name", name);
-//            nameCookie.setHttpOnly(true); // true = make cookie unaccessible from javascript
-            nameCookie.setPath("/"); // global cookie accessible everywhere from the current domain
-            resp.addCookie(nameCookie);
+        // store value of name parameter in cookie
+        if (name != null) {
+            // send new cookie to store name in browser
+            Cookie newCookie = new Cookie(COOKIE_NAME, name);
+
+            // cookie valid for 1 hour
+            newCookie.setMaxAge(60 * 60);
+
+            // send cookie with response
+            resp.addCookie(newCookie);
+
+            resp.sendRedirect("/cookie");
+            return;
         }
 
-        resp.getWriter().printf("Hello %s%n", name);
+        // search for cookie
+        Cookie mycookie = findCookie(req, COOKIE_NAME);
+
+        if (mycookie == null) {
+            resp.getWriter().println("Cookie nicht gefunden.");
+            return;
+        }
+
+        // delete cookie in browser
+        if (req.getParameter("remove") != null) {
+            Cookie emptyCookie = new Cookie(COOKIE_NAME, null);
+
+            // force cookie deletion
+            emptyCookie.setMaxAge(0);
+
+            // send empty cookie with response
+            resp.addCookie(emptyCookie);
+
+            resp.getWriter().println("Cookie gelöscht!");
+            return;
+        }
+
+        // show cookie value
+        resp.getWriter().println("Hello " + mycookie.getValue());
+
+    }
+
+    private Cookie findCookie(HttpServletRequest req, String cookieName) {
+
+        // do we have any cookies?
+        if (req.getCookies() == null) {
+            return null;
+        }
+
+        // search for our cookie in request cookies
+        for (Cookie cookie : req.getCookies()) {
+            if (cookie.getName().equals(cookieName)) { // do we have OUR cookie?
+                return cookie;
+            }
+        }
+
+        // we could not find our cookie
+        return null;
     }
 }

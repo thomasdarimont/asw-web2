@@ -12,6 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Example for working with {@link Cookie Cookie's}.
  *
+ * Run via with Jetty from Eclipse:
+ * 0) select project
+ * 1) Run as maven build...
+ * 2) Goals: jetty:run
+ * 3) Browse to the URLs listed below
+ *
  * Run with Jetty:
  * 1) mvn jetty:run
  * 2) Browse to http://localhost:8080/cookie

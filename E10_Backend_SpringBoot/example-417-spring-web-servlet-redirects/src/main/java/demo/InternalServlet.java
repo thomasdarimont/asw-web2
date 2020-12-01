@@ -8,6 +8,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.Instant;
 
+/**
+ * This servlet is not directly accessible, since there are no URL patterns configured.
+ * @author tom
+ *
+ */
 @WebServlet(name = "internal")
 public class InternalServlet extends HttpServlet {
 

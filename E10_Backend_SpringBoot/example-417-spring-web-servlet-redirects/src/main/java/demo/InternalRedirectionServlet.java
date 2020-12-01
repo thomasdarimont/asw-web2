@@ -19,6 +19,7 @@ public class InternalRedirectionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+    	// Forward the (request, response) pair to the internally available servlet "internal"
         RequestDispatcher dispatcher = req.getRequestDispatcher("internal");
         req.setAttribute("internal", true);
         dispatcher.forward(req, resp);

@@ -10,6 +10,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * 
+ * Run via with Jetty from Eclipse:
+ * 0) select project
+ * 1) Run as maven build...
+ * 2) Goals: jetty:run
+ * 3) Browse to http://localhost:8080/hello
+ * 4) Watch for log messages from ExampleWebListener
+ * 
  * Run with Jetty:
  * 1) mvn jetty:run
  * 2) Browse to http://localhost:8080/hello

@@ -10,8 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 
 
 /**
- * Run with Jetty:
- * 0) cd into example-300-javaee-servlet-hello-world directory
+ * Simple calculator servlet that supports submitting a HTML form via HTTP GET and POST.
+ * 
+ * Run via with Jetty from Eclipse:
+ * 0) select example-311-javaee-servlet-calculator-form project
+ * 1) Run as maven build...
+ * 2) Goals: jetty:run
+ * 3) Browse to http://localhost:8080/calc.html
+ * 
+ * Run with Jetty from Console:
+ * 0) cd into example-311-javaee-servlet-calculator-form directory
  * 1) mvn jetty:run
  * 2) Browse to http://localhost:8080/calc.html
  */

@@ -10,8 +10,16 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Run with Jetty:
+ * Run via with Jetty from Eclipse:
+ * 0) select project
+ * 1) Run as maven build...
+ * 2) Goals: jetty:run
+ * 3) Browse to the URLs listed below
+ * 4) Watch for log messages from ExampleWebListener
+ * 
+ * Run with Jetty from console:
  * 1) mvn jetty:run
+ * 
  * 2) Browse to http://localhost:8080/session and inspect cookies ->  JSessionID cookie should be present, take note of sessionId
  * 3) Browse to http://localhost:8080/session?name=World to set the name attribute in the session to "test"
  * 4) Browse to http://localhost:8080/session and inspect cookies -> now we should see name read from the session
