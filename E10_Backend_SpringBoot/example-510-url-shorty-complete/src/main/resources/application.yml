@@ -1,0 +1,6 @@
+# Required to trigger @DeleteMappings via HTTP POST and _method=DELETE form parameter
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true

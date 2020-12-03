@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>URL-Shorty</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="icon" href="data:,"> <!-- disable favicon requests -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/shorty.css">
+
+<!--    <script src="/js/shorty.js"></script>-->
+
+</head>
+<body>
+
+<div class="container">
+    <h1>URL Shorty</h1>
+    <nav>
+        <a href="/about" class="btn btn-link">About</a>
+    </nav>
+
+    <form th:action="@{/urls/shorten}" method="post" class="my-4 form-inline">
+        <label for="fullUrl" class="sr-only">Url</label>
+        <input type="url" id="fullUrl" name="fullUrl" placeholder="Enter URL here..." class="form-control col mr-2"
+               required>
+        <button type="submit" class="btn btn-primary">Shorten</button>
+    </form>
+
+    <div th:if="${urls.empty}" class="jumbotron">
+        <h1 class="display-4">Wow such empty... how about adding a link?</h1>
+    </div>
+
+    <table id="links" class="table table-striped" th:if="${!urls.empty}">
+        <thead>
+        <tr>
+            <td>#</td>
+            <th>Full URL</th>
+            <th>Short URL</th>
+            <th>Created</th>
+            <th>Last Accessed</th>
+            <th>Clicks</th>
+            <th>...</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="url, urlIndex : ${urls}">
+            <td th:text="${urlIndex.index + 1}">0</td>
+            <td><a th:href="${url.fullUrl}" th:text="${url.fullUrl}" target="_blank" rel="noreferrer">https://example.com</a>
+            </td>
+            <td><a th:href="|/urls/${url.shortId}|" th:text="${url.shortId}" target="_blank" rel="noreferrer">1234</a>
+            </td>
+            <td th:text="${#temporals.format(url.createdAt, 'dd.MM.yyyy HH:mm:ss')}">16.09.2020 01:00:25</td>
+            <td th:text="${#temporals.format(url.lastAccessedAt, 'dd.MM.yyyy HH:mm:ss')}">16.09.2020 01:00:25</td>
+            <td th:text="${url.clicks}">42</td>
+            <td>
+                <form th:action="|/urls/${url.shortId}|" method="post">
+                    <input type="hidden" name="_method" value="DELETE"/>
+                    <button class="btn btn-secondary btn-sm" title="delete">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </form>
+            </td>
+
+            <!-- Example for using html5 fetch to delete an entry-->
+            <!--
+            <td>
+                <button th:attr="data-action='delete', data-shortid=${url.shortId}" class="btn btn-secondary btn-sm"
+                        title="delete">
+                    <i class="fa fa-trash"></i>
+                </button>
+            </td>
+            -->
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

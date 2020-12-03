@@ -1,0 +1,27 @@
+
+### Get all Urls
+GET http://localhost:8080/api/urls
+
+### Shrink new url
+POST http://localhost:8080/api/urls
+Content-Type: application/x-www-form-urlencoded
+
+fullUrl=http://example.com
+
+### Shrink another url
+POST http://localhost:8080/api/urls
+Content-Type: application/x-www-form-urlencoded
+
+fullUrl=http://google.com
+
+### Find URL by ShortId
+GET http://localhost:8080/api/urls/5095c5b9
+
+### Find URL by ShortId with no result
+GET http://localhost:8080/api/urls/notfound
+
+### Get Redirect to URL by ShortId
+GET http://localhost:8080/api/urls/5095c5b9/redirect
+
+### Delete URL by ShortId
+DELETE http://localhost:8080/api/urls/5095c5b9

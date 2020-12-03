@@ -55,6 +55,7 @@
         <module>E10_Backend_SpringBoot/example-451-spring-todomvc-simple</module>
         <module>E10_Backend_SpringBoot/example-452-spring-todomvc-simple-client</module>
         <module>E10_Backend_SpringBoot/example-453-spring-todomvc-webui</module>
+        <module>E10_Backend_SpringBoot/example-510-url-shorty-complete</module>
         <module>E10_Backend_SpringBoot/example-814-spring-web-excel-export</module>
         <module>L10_Labs/lab-110-http-requests-example-server</module>
         <module>X10_Exkurs/java-maven-example</module>
