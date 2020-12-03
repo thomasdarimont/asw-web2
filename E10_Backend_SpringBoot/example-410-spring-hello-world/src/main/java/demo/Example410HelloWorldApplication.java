@@ -35,7 +35,6 @@ class HelloController {
     //     return "<h1>Hello " + name + " " + LocalDateTime.now() +"</h1>";
     // }
 }
-
 @RestController
 class HelloController2 {
 
