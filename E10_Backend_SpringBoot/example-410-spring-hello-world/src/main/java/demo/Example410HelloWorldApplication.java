@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -33,4 +34,15 @@ class HelloController {
     // public String greet(@RequestParam(defaultValue = "World") String name) {
     //     return "<h1>Hello " + name + " " + LocalDateTime.now() +"</h1>";
     // }
+}
+
+@RestController
+class HelloController2 {
+
+    @GetMapping("/hello2")
+    public ResponseEntity<?> greet2(@RequestParam(defaultValue = "World") String name) {
+        return ResponseEntity.ok()
+                .header("my-response-header", "test")
+                .body(Map.of("msg","Hello2 " + name + " " + LocalDateTime.now()));
+    }
 }
