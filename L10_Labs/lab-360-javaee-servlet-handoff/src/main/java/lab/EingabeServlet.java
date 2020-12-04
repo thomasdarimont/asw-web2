@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 // YOURCODE Use the proper Annotation for Servlets
 // @???("/handoff/eingabe")
-public class EingabeServlet extends 
-	//	??? { // use the proper Base-class for Servlets 
+public class EingabeServlet
+	//  extends  ??? { // use the proper Base-class for Servlets
 	 { // remove this line
 
 	private static final long serialVersionUID = 1L;
