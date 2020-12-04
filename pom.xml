@@ -60,13 +60,13 @@
         <module>L10_Labs/lab-110-http-requests-example-server</module>
         <module>X10_Exkurs/java-maven-example</module>
 
-        <module>L10_Labs/lab-310-javaee-servlet-dynamic-table</module>
-        <module>L10_Labs/lab-350-javaee-servlet-meeting-planner</module>
-        <module>L10_Labs/lab-360-javaee-servlet-handoff</module>
-        <module>L10_Labs/lab-370-javaee-servlet-filter-tracing</module>
-        <module>L10_Labs/lab-375-javaee-servlet-http-sessions</module>
-        <module>L10_Labs/lab-378-javaee-jsp-system-properties</module>
-        <module>L10_Labs/lab-390-javaee-servlet-number-game</module>
+<!--        <module>L10_Labs/lab-310-javaee-servlet-dynamic-table</module>-->
+<!--        <module>L10_Labs/lab-350-javaee-servlet-meeting-planner</module>-->
+<!--        <module>L10_Labs/lab-360-javaee-servlet-handoff</module>-->
+<!--        <module>L10_Labs/lab-370-javaee-servlet-filter-tracing</module>-->
+<!--        <module>L10_Labs/lab-375-javaee-servlet-http-sessions</module>-->
+<!--        <module>L10_Labs/lab-378-javaee-jsp-system-properties</module>-->
+<!--        <module>L10_Labs/lab-390-javaee-servlet-number-game</module>-->
 
     </modules>
 
