@@ -19,26 +19,32 @@ import todos.Todo;
 import todos.TodoService;
 
 /**
+ * Simple REST Controller for the ToDo MVC API.
+ * 
  * <pre>
  * {@code
  *
  *   # list all todos
- *   curl -v -H "Accept: application/json" http://localhost:8080/todos
+ *   curl -s -H "Accept: application/json" http://localhost:8090/simple/todos
  *
  *   # Create new todo
- *   curl -v -X POST -H "Content-type: application/json" -d '{ "title":"Test TODO", "completed":false }' http://localhost:8080/todos
+ *   curl -s -X POST -H "Content-type: application/json" -d '{ "title":"Test TODO", "completed":false }' http://localhost:8090/simple/todos
  *
  *   # show todo with id 1
- *   curl -v -H "Accept: application/json" http://localhost:8080/todos/1
- *
+ *   curl -s -H "Accept: application/json" http://localhost:8090/simple/todos/1
+ *   
+ *   # mark todo 2 as completed
+ *   curl -s -X PUT -H "Content-type: application/json" -d '{ "title": "Vorlesung halten", "completed":true }' http://localhost:8090/simple/todos/2
+ *   
  *   # delete todo with id 1
- *   curl -v -X DELETE http://localhost:8080/todos/1
+ *   curl -s -X DELETE http://localhost:8090/simple/todos/1
  *
- *   # search for all todo's with titles beginning with 'test'
- *   curl -v -d '{"title":"test"}' -H "Content-type: application/json" -H "Accept: application/json" http://localhost:8080/todos/search
+ *   # search for all todo's with titles beginning with 'test' via POST
+ *   curl -s -H "Content-type: application/json" -d '{"title":"Feedback"}' http://localhost:8090/simple/todos/search
  *
- *   # search for all todo's with completed = true
- *   curl -v -d '{"title":"test"}' -H "Content-type: application/json" -H "Accept: application/json" http://localhost:8080/todos/search
+ *   # search for all todo's with completed = true via GET and URL Parameters
+ *   Windows: curl -s http://localhost:8090/simple/todos/search?completed=true
+ *   Linux/OSX: curl -s http://localhost:8090/simple/todos/search\?completed=true
  * }
  * </pre>
  */
